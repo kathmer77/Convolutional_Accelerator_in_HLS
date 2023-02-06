@@ -1,0 +1,209 @@
+
+
+================================================================
+== Vitis HLS Report for 'score_matrix'
+================================================================
+* Date:           Mon Dec 13 14:39:58 2021
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
+* Project:        TRT
+* Solution:       Optimization (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.297 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       57|       57|  0.570 us|  0.570 us|   58|   58|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP1   |       54|       54|        18|          -|          -|     3|        no|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.73>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%m = alloca i32 1"   --->   Operation 6 'alloca' 'm' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%queries_2_addr = getelementptr i32 %queries_2, i64 0, i64 0"   --->   Operation 7 'getelementptr' 'queries_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (0.73ns)   --->   "%queries_2_load = load i2 %queries_2_addr"   --->   Operation 8 'load' 'queries_2_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%queries_0_addr = getelementptr i32 %queries_0, i64 0, i64 0"   --->   Operation 9 'getelementptr' 'queries_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (0.73ns)   --->   "%queries_0_load = load i2 %queries_0_addr"   --->   Operation 10 'load' 'queries_0_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%queries_1_addr = getelementptr i32 %queries_1, i64 0, i64 0"   --->   Operation 11 'getelementptr' 'queries_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (0.73ns)   --->   "%queries_1_load = load i2 %queries_1_addr"   --->   Operation 12 'load' 'queries_1_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_1 : Operation 13 [1/1] (0.46ns)   --->   "%store_ln11 = store i2 0, i2 %m" [transformer.cpp:11]   --->   Operation 13 'store' 'store_ln11' <Predicate = true> <Delay = 0.46>
+
+State 2 <SV = 1> <Delay = 0.73>
+ST_2 : Operation 14 [1/2] (0.73ns)   --->   "%queries_2_load = load i2 %queries_2_addr"   --->   Operation 14 'load' 'queries_2_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 15 [1/2] (0.73ns)   --->   "%queries_0_load = load i2 %queries_0_addr"   --->   Operation 15 'load' 'queries_0_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 16 [1/2] (0.73ns)   --->   "%queries_1_load = load i2 %queries_1_addr"   --->   Operation 16 'load' 'queries_1_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%queries_2_addr_1 = getelementptr i32 %queries_2, i64 0, i64 1"   --->   Operation 17 'getelementptr' 'queries_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (0.73ns)   --->   "%queries_2_load_1 = load i2 %queries_2_addr_1"   --->   Operation 18 'load' 'queries_2_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%queries_0_addr_1 = getelementptr i32 %queries_0, i64 0, i64 1"   --->   Operation 19 'getelementptr' 'queries_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (0.73ns)   --->   "%queries_0_load_1 = load i2 %queries_0_addr_1"   --->   Operation 20 'load' 'queries_0_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%queries_1_addr_1 = getelementptr i32 %queries_1, i64 0, i64 1"   --->   Operation 21 'getelementptr' 'queries_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [2/2] (0.73ns)   --->   "%queries_1_load_1 = load i2 %queries_1_addr_1"   --->   Operation 22 'load' 'queries_1_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%queries_2_addr_2 = getelementptr i32 %queries_2, i64 0, i64 2"   --->   Operation 23 'getelementptr' 'queries_2_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (0.73ns)   --->   "%queries_2_load_2 = load i2 %queries_2_addr_2"   --->   Operation 24 'load' 'queries_2_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%queries_0_addr_2 = getelementptr i32 %queries_0, i64 0, i64 2"   --->   Operation 25 'getelementptr' 'queries_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (0.73ns)   --->   "%queries_0_load_2 = load i2 %queries_0_addr_2"   --->   Operation 26 'load' 'queries_0_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%queries_1_addr_2 = getelementptr i32 %queries_1, i64 0, i64 2"   --->   Operation 27 'getelementptr' 'queries_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [2/2] (0.73ns)   --->   "%queries_1_load_2 = load i2 %queries_1_addr_2"   --->   Operation 28 'load' 'queries_1_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 3 <SV = 2> <Delay = 0.73>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 29 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %score_m_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %score_m_0"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %score_m_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %score_m_1"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %score_m_2, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %score_m_2"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %queries_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %queries_0"   --->   Operation 37 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %queries_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %queries_1"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %queries_2, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %queries_2"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %keys_t_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %keys_t_0"   --->   Operation 43 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %keys_t_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %keys_t_1"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %keys_t_2, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %keys_t_2"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/2] (0.73ns)   --->   "%queries_2_load_1 = load i2 %queries_2_addr_1"   --->   Operation 48 'load' 'queries_2_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 49 [1/2] (0.73ns)   --->   "%queries_0_load_1 = load i2 %queries_0_addr_1"   --->   Operation 49 'load' 'queries_0_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 50 [1/2] (0.73ns)   --->   "%queries_1_load_1 = load i2 %queries_1_addr_1"   --->   Operation 50 'load' 'queries_1_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 51 [1/2] (0.73ns)   --->   "%queries_2_load_2 = load i2 %queries_2_addr_2"   --->   Operation 51 'load' 'queries_2_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 52 [1/2] (0.73ns)   --->   "%queries_0_load_2 = load i2 %queries_0_addr_2"   --->   Operation 52 'load' 'queries_0_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 53 [1/2] (0.73ns)   --->   "%queries_1_load_2 = load i2 %queries_1_addr_2"   --->   Operation 53 'load' 'queries_1_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln11 = br void" [transformer.cpp:11]   --->   Operation 54 'br' 'br_ln11' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.10>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%m_1 = load i2 %m" [transformer.cpp:11]   --->   Operation 55 'load' 'm_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.39ns)   --->   "%icmp_ln11 = icmp_eq  i2 %m_1, i2 3" [transformer.cpp:11]   --->   Operation 56 'icmp' 'icmp_ln11' <Predicate = true> <Delay = 0.39> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3"   --->   Operation 57 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.62ns)   --->   "%add_ln11 = add i2 %m_1, i2 1" [transformer.cpp:11]   --->   Operation 58 'add' 'add_ln11' <Predicate = true> <Delay = 0.62> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln11 = br i1 %icmp_ln11, void %.split2, void" [transformer.cpp:11]   --->   Operation 59 'br' 'br_ln11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.54ns)   --->   "%p_in2 = mux i32 @_ssdm_op_Mux.ap_auto.4i32.i2, i32 %queries_0_load_2, i32 %queries_1_load_2, i32 %queries_2_load_2, i32 %queries_2_load_2, i2 %m_1" [transformer.cpp:11]   --->   Operation 60 'mux' 'p_in2' <Predicate = (!icmp_ln11)> <Delay = 0.54> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [1/1] (0.54ns)   --->   "%p_in1 = mux i32 @_ssdm_op_Mux.ap_auto.4i32.i2, i32 %queries_0_load, i32 %queries_1_load, i32 %queries_2_load, i32 %queries_2_load, i2 %m_1" [transformer.cpp:11]   --->   Operation 61 'mux' 'p_in1' <Predicate = (!icmp_ln11)> <Delay = 0.54> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (0.54ns)   --->   "%p_in = mux i32 @_ssdm_op_Mux.ap_auto.4i32.i2, i32 %queries_0_load_1, i32 %queries_1_load_1, i32 %queries_2_load_1, i32 %queries_2_load_1, i2 %m_1" [transformer.cpp:11]   --->   Operation 62 'mux' 'p_in' <Predicate = (!icmp_ln11)> <Delay = 0.54> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%empty_10 = bitcast i32 %p_in2" [transformer.cpp:11]   --->   Operation 63 'bitcast' 'empty_10' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%empty_11 = bitcast i32 %p_in1" [transformer.cpp:11]   --->   Operation 64 'bitcast' 'empty_11' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%empty_12 = bitcast i32 %p_in" [transformer.cpp:11]   --->   Operation 65 'bitcast' 'empty_12' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_4 : Operation 66 [2/2] (0.56ns)   --->   "%call_ln11 = call void @score_matrix_Pipeline_LOOP2, i32 %score_m_0, i32 %keys_t_0, i32 %empty_11, i32 %keys_t_1, i32 %empty_12, i32 %keys_t_2, i32 %empty_10, i2 %m_1, i32 %score_m_1, i32 %score_m_2" [transformer.cpp:11]   --->   Operation 66 'call' 'call_ln11' <Predicate = (!icmp_ln11)> <Delay = 0.56> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 67 [1/1] (0.46ns)   --->   "%store_ln11 = store i2 %add_ln11, i2 %m" [transformer.cpp:11]   --->   Operation 67 'store' 'store_ln11' <Predicate = (!icmp_ln11)> <Delay = 0.46>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%ret_ln23 = ret" [transformer.cpp:23]   --->   Operation 68 'ret' 'ret_ln23' <Predicate = (icmp_ln11)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [transformer.cpp:11]   --->   Operation 69 'specloopname' 'specloopname_ln11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 70 [1/2] (0.00ns)   --->   "%call_ln11 = call void @score_matrix_Pipeline_LOOP2, i32 %score_m_0, i32 %keys_t_0, i32 %empty_11, i32 %keys_t_1, i32 %empty_12, i32 %keys_t_2, i32 %empty_10, i2 %m_1, i32 %score_m_1, i32 %score_m_2" [transformer.cpp:11]   --->   Operation 70 'call' 'call_ln11' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 71 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.73ns
+The critical path consists of the following:
+	'getelementptr' operation ('queries_2_addr') [30]  (0 ns)
+	'load' operation ('queries_2_load') on array 'queries_2' [31]  (0.73 ns)
+
+ <State 2>: 0.73ns
+The critical path consists of the following:
+	'load' operation ('queries_2_load') on array 'queries_2' [31]  (0.73 ns)
+
+ <State 3>: 0.73ns
+The critical path consists of the following:
+	'load' operation ('queries_2_load_1') on array 'queries_2' [37]  (0.73 ns)
+
+ <State 4>: 1.11ns
+The critical path consists of the following:
+	'load' operation ('m', transformer.cpp:11) on local variable 'm' [51]  (0 ns)
+	'mux' operation ('p_in', transformer.cpp:11) [60]  (0.544 ns)
+	'call' operation ('call_ln11', transformer.cpp:11) to 'score_matrix_Pipeline_LOOP2' [64]  (0.561 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

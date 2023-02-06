@@ -1,0 +1,24 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="score_matrix" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="w" src_name="score_m" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="9">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="score_m" hw_bitwidth="32" hw_size_or_depth="9">
+          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="r" src_name="queries" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="9">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="queries" hw_bitwidth="32" hw_size_or_depth="9">
+          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="r" src_name="keys_t" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="9">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="keys_t" hw_bitwidth="32" hw_size_or_depth="9">
+          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0"/>
+    </return>
+  </kernel>
+</root>

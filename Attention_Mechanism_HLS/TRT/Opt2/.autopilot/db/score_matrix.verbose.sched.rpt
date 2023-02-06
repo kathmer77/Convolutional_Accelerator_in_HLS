@@ -1,0 +1,485 @@
+
+
+================================================================
+== Vitis HLS Report for 'score_matrix'
+================================================================
+* Date:           Mon Dec 13 14:51:47 2021
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
+* Project:        TRT
+* Solution:       Opt2 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.297 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|    5|    5|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 5, depth = 17
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 1
+  Pipeline-0 : II = 5, D = 17, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.73>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%queries_addr = getelementptr i32 %queries, i64 0, i64 0" [transformer.cpp:21]   --->   Operation 18 'getelementptr' 'queries_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%queries_addr_3 = getelementptr i32 %queries, i64 0, i64 3" [transformer.cpp:21]   --->   Operation 19 'getelementptr' 'queries_addr_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%keys_t_addr = getelementptr i32 %keys_t, i64 0, i64 0" [transformer.cpp:21]   --->   Operation 20 'getelementptr' 'keys_t_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%keys_t_addr_3 = getelementptr i32 %keys_t, i64 0, i64 1" [transformer.cpp:21]   --->   Operation 21 'getelementptr' 'keys_t_addr_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (0.73ns)   --->   "%queries_load = load i4 %queries_addr" [transformer.cpp:21]   --->   Operation 22 'load' 'queries_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_1 : Operation 23 [2/2] (0.73ns)   --->   "%keys_t_load = load i4 %keys_t_addr" [transformer.cpp:21]   --->   Operation 23 'load' 'keys_t_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_1 : Operation 24 [2/2] (0.73ns)   --->   "%keys_t_load_3 = load i4 %keys_t_addr_3" [transformer.cpp:21]   --->   Operation 24 'load' 'keys_t_load_3' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_1 : Operation 25 [2/2] (0.73ns)   --->   "%queries_load_3 = load i4 %queries_addr_3" [transformer.cpp:21]   --->   Operation 25 'load' 'queries_load_3' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 2 <SV = 1> <Delay = 6.64>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%queries_addr_1 = getelementptr i32 %queries, i64 0, i64 1" [transformer.cpp:21]   --->   Operation 26 'getelementptr' 'queries_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%queries_addr_6 = getelementptr i32 %queries, i64 0, i64 6" [transformer.cpp:21]   --->   Operation 27 'getelementptr' 'queries_addr_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%keys_t_addr_1 = getelementptr i32 %keys_t, i64 0, i64 3" [transformer.cpp:21]   --->   Operation 28 'getelementptr' 'keys_t_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%keys_t_addr_6 = getelementptr i32 %keys_t, i64 0, i64 2" [transformer.cpp:21]   --->   Operation 29 'getelementptr' 'keys_t_addr_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/2] (0.73ns)   --->   "%queries_load = load i4 %queries_addr" [transformer.cpp:21]   --->   Operation 30 'load' 'queries_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%bitcast_ln21 = bitcast i32 %queries_load" [transformer.cpp:21]   --->   Operation 31 'bitcast' 'bitcast_ln21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/2] (0.73ns)   --->   "%keys_t_load = load i4 %keys_t_addr" [transformer.cpp:21]   --->   Operation 32 'load' 'keys_t_load' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%bitcast_ln21_1 = bitcast i32 %keys_t_load" [transformer.cpp:21]   --->   Operation 33 'bitcast' 'bitcast_ln21_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (5.91ns)   --->   "%mul = fmul i32 %bitcast_ln21, i32 %bitcast_ln21_1" [transformer.cpp:21]   --->   Operation 34 'fmul' 'mul' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [2/2] (0.73ns)   --->   "%queries_load_1 = load i4 %queries_addr_1" [transformer.cpp:21]   --->   Operation 35 'load' 'queries_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 36 [2/2] (0.73ns)   --->   "%keys_t_load_1 = load i4 %keys_t_addr_1" [transformer.cpp:21]   --->   Operation 36 'load' 'keys_t_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 37 [1/2] (0.73ns)   --->   "%keys_t_load_3 = load i4 %keys_t_addr_3" [transformer.cpp:21]   --->   Operation 37 'load' 'keys_t_load_3' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%bitcast_ln21_7 = bitcast i32 %keys_t_load_3" [transformer.cpp:21]   --->   Operation 38 'bitcast' 'bitcast_ln21_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [2/2] (5.91ns)   --->   "%mul_4 = fmul i32 %bitcast_ln21, i32 %bitcast_ln21_7" [transformer.cpp:21]   --->   Operation 39 'fmul' 'mul_4' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [2/2] (0.73ns)   --->   "%keys_t_load_6 = load i4 %keys_t_addr_6" [transformer.cpp:21]   --->   Operation 40 'load' 'keys_t_load_6' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 41 [1/2] (0.73ns)   --->   "%queries_load_3 = load i4 %queries_addr_3" [transformer.cpp:21]   --->   Operation 41 'load' 'queries_load_3' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%bitcast_ln21_15 = bitcast i32 %queries_load_3" [transformer.cpp:21]   --->   Operation 42 'bitcast' 'bitcast_ln21_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [2/2] (5.91ns)   --->   "%mul_1 = fmul i32 %bitcast_ln21_15, i32 %bitcast_ln21_1" [transformer.cpp:21]   --->   Operation 43 'fmul' 'mul_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [2/2] (5.91ns)   --->   "%mul_1_1 = fmul i32 %bitcast_ln21_15, i32 %bitcast_ln21_7" [transformer.cpp:21]   --->   Operation 44 'fmul' 'mul_1_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [2/2] (0.73ns)   --->   "%queries_load_6 = load i4 %queries_addr_6" [transformer.cpp:21]   --->   Operation 45 'load' 'queries_load_6' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 3 <SV = 2> <Delay = 6.64>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%queries_addr_4 = getelementptr i32 %queries, i64 0, i64 4" [transformer.cpp:21]   --->   Operation 46 'getelementptr' 'queries_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%queries_addr_7 = getelementptr i32 %queries, i64 0, i64 7" [transformer.cpp:21]   --->   Operation 47 'getelementptr' 'queries_addr_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%keys_t_addr_4 = getelementptr i32 %keys_t, i64 0, i64 4" [transformer.cpp:21]   --->   Operation 48 'getelementptr' 'keys_t_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%keys_t_addr_7 = getelementptr i32 %keys_t, i64 0, i64 5" [transformer.cpp:21]   --->   Operation 49 'getelementptr' 'keys_t_addr_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/2] (5.91ns)   --->   "%mul = fmul i32 %bitcast_ln21, i32 %bitcast_ln21_1" [transformer.cpp:21]   --->   Operation 50 'fmul' 'mul' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/2] (0.73ns)   --->   "%queries_load_1 = load i4 %queries_addr_1" [transformer.cpp:21]   --->   Operation 51 'load' 'queries_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%bitcast_ln21_2 = bitcast i32 %queries_load_1" [transformer.cpp:21]   --->   Operation 52 'bitcast' 'bitcast_ln21_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/2] (0.73ns)   --->   "%keys_t_load_1 = load i4 %keys_t_addr_1" [transformer.cpp:21]   --->   Operation 53 'load' 'keys_t_load_1' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%bitcast_ln21_3 = bitcast i32 %keys_t_load_1" [transformer.cpp:21]   --->   Operation 54 'bitcast' 'bitcast_ln21_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [2/2] (5.91ns)   --->   "%mul_s = fmul i32 %bitcast_ln21_2, i32 %bitcast_ln21_3" [transformer.cpp:21]   --->   Operation 55 'fmul' 'mul_s' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/2] (5.91ns)   --->   "%mul_4 = fmul i32 %bitcast_ln21, i32 %bitcast_ln21_7" [transformer.cpp:21]   --->   Operation 56 'fmul' 'mul_4' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [2/2] (0.73ns)   --->   "%keys_t_load_4 = load i4 %keys_t_addr_4" [transformer.cpp:21]   --->   Operation 57 'load' 'keys_t_load_4' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 58 [1/2] (0.73ns)   --->   "%keys_t_load_6 = load i4 %keys_t_addr_6" [transformer.cpp:21]   --->   Operation 58 'load' 'keys_t_load_6' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%bitcast_ln21_11 = bitcast i32 %keys_t_load_6" [transformer.cpp:21]   --->   Operation 59 'bitcast' 'bitcast_ln21_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [2/2] (5.91ns)   --->   "%mul_5 = fmul i32 %bitcast_ln21, i32 %bitcast_ln21_11" [transformer.cpp:21]   --->   Operation 60 'fmul' 'mul_5' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 61 [2/2] (0.73ns)   --->   "%keys_t_load_7 = load i4 %keys_t_addr_7" [transformer.cpp:21]   --->   Operation 61 'load' 'keys_t_load_7' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 62 [1/2] (5.91ns)   --->   "%mul_1 = fmul i32 %bitcast_ln21_15, i32 %bitcast_ln21_1" [transformer.cpp:21]   --->   Operation 62 'fmul' 'mul_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 63 [2/2] (0.73ns)   --->   "%queries_load_4 = load i4 %queries_addr_4" [transformer.cpp:21]   --->   Operation 63 'load' 'queries_load_4' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 64 [1/2] (5.91ns)   --->   "%mul_1_1 = fmul i32 %bitcast_ln21_15, i32 %bitcast_ln21_7" [transformer.cpp:21]   --->   Operation 64 'fmul' 'mul_1_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [2/2] (5.91ns)   --->   "%mul_1_2 = fmul i32 %bitcast_ln21_15, i32 %bitcast_ln21_11" [transformer.cpp:21]   --->   Operation 65 'fmul' 'mul_1_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [1/2] (0.73ns)   --->   "%queries_load_6 = load i4 %queries_addr_6" [transformer.cpp:21]   --->   Operation 66 'load' 'queries_load_6' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%bitcast_ln21_21 = bitcast i32 %queries_load_6" [transformer.cpp:21]   --->   Operation 67 'bitcast' 'bitcast_ln21_21' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [2/2] (5.91ns)   --->   "%mul_2 = fmul i32 %bitcast_ln21_21, i32 %bitcast_ln21_1" [transformer.cpp:21]   --->   Operation 68 'fmul' 'mul_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [2/2] (0.73ns)   --->   "%queries_load_7 = load i4 %queries_addr_7" [transformer.cpp:21]   --->   Operation 69 'load' 'queries_load_7' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 70 [2/2] (5.91ns)   --->   "%mul_2_1 = fmul i32 %bitcast_ln21_21, i32 %bitcast_ln21_7" [transformer.cpp:21]   --->   Operation 70 'fmul' 'mul_2_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [2/2] (5.91ns)   --->   "%mul_2_2 = fmul i32 %bitcast_ln21_21, i32 %bitcast_ln21_11" [transformer.cpp:21]   --->   Operation 71 'fmul' 'mul_2_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.29>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%queries_addr_2 = getelementptr i32 %queries, i64 0, i64 2" [transformer.cpp:21]   --->   Operation 72 'getelementptr' 'queries_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%queries_addr_5 = getelementptr i32 %queries, i64 0, i64 5" [transformer.cpp:21]   --->   Operation 73 'getelementptr' 'queries_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%keys_t_addr_2 = getelementptr i32 %keys_t, i64 0, i64 6" [transformer.cpp:21]   --->   Operation 74 'getelementptr' 'keys_t_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%keys_t_addr_5 = getelementptr i32 %keys_t, i64 0, i64 7" [transformer.cpp:21]   --->   Operation 75 'getelementptr' 'keys_t_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [3/3] (7.29ns)   --->   "%add = fadd i32 %mul, i32 0" [transformer.cpp:21]   --->   Operation 76 'fadd' 'add' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 77 [1/2] (5.91ns)   --->   "%mul_s = fmul i32 %bitcast_ln21_2, i32 %bitcast_ln21_3" [transformer.cpp:21]   --->   Operation 77 'fmul' 'mul_s' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [2/2] (0.73ns)   --->   "%queries_load_2 = load i4 %queries_addr_2" [transformer.cpp:21]   --->   Operation 78 'load' 'queries_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 79 [2/2] (0.73ns)   --->   "%keys_t_load_2 = load i4 %keys_t_addr_2" [transformer.cpp:21]   --->   Operation 79 'load' 'keys_t_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 80 [3/3] (7.29ns)   --->   "%add_4 = fadd i32 %mul_4, i32 0" [transformer.cpp:21]   --->   Operation 80 'fadd' 'add_4' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [1/2] (0.73ns)   --->   "%keys_t_load_4 = load i4 %keys_t_addr_4" [transformer.cpp:21]   --->   Operation 81 'load' 'keys_t_load_4' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln21_8 = bitcast i32 %keys_t_load_4" [transformer.cpp:21]   --->   Operation 82 'bitcast' 'bitcast_ln21_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [2/2] (5.91ns)   --->   "%mul_128_1 = fmul i32 %bitcast_ln21_2, i32 %bitcast_ln21_8" [transformer.cpp:21]   --->   Operation 83 'fmul' 'mul_128_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 84 [2/2] (0.73ns)   --->   "%keys_t_load_5 = load i4 %keys_t_addr_5" [transformer.cpp:21]   --->   Operation 84 'load' 'keys_t_load_5' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 85 [1/2] (5.91ns)   --->   "%mul_5 = fmul i32 %bitcast_ln21, i32 %bitcast_ln21_11" [transformer.cpp:21]   --->   Operation 85 'fmul' 'mul_5' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/2] (0.73ns)   --->   "%keys_t_load_7 = load i4 %keys_t_addr_7" [transformer.cpp:21]   --->   Operation 86 'load' 'keys_t_load_7' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%bitcast_ln21_12 = bitcast i32 %keys_t_load_7" [transformer.cpp:21]   --->   Operation 87 'bitcast' 'bitcast_ln21_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 88 [2/2] (5.91ns)   --->   "%mul_234_1 = fmul i32 %bitcast_ln21_2, i32 %bitcast_ln21_12" [transformer.cpp:21]   --->   Operation 88 'fmul' 'mul_234_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [3/3] (7.29ns)   --->   "%add_1 = fadd i32 %mul_1, i32 0" [transformer.cpp:21]   --->   Operation 89 'fadd' 'add_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 90 [1/2] (0.73ns)   --->   "%queries_load_4 = load i4 %queries_addr_4" [transformer.cpp:21]   --->   Operation 90 'load' 'queries_load_4' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%bitcast_ln21_16 = bitcast i32 %queries_load_4" [transformer.cpp:21]   --->   Operation 91 'bitcast' 'bitcast_ln21_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [2/2] (5.91ns)   --->   "%mul_1_s = fmul i32 %bitcast_ln21_16, i32 %bitcast_ln21_3" [transformer.cpp:21]   --->   Operation 92 'fmul' 'mul_1_s' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [2/2] (0.73ns)   --->   "%queries_load_5 = load i4 %queries_addr_5" [transformer.cpp:21]   --->   Operation 93 'load' 'queries_load_5' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 94 [3/3] (7.29ns)   --->   "%add_1_1 = fadd i32 %mul_1_1, i32 0" [transformer.cpp:21]   --->   Operation 94 'fadd' 'add_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 95 [2/2] (5.91ns)   --->   "%mul_1_1_1 = fmul i32 %bitcast_ln21_16, i32 %bitcast_ln21_8" [transformer.cpp:21]   --->   Operation 95 'fmul' 'mul_1_1_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 96 [1/2] (5.91ns)   --->   "%mul_1_2 = fmul i32 %bitcast_ln21_15, i32 %bitcast_ln21_11" [transformer.cpp:21]   --->   Operation 96 'fmul' 'mul_1_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 97 [2/2] (5.91ns)   --->   "%mul_1_2_1 = fmul i32 %bitcast_ln21_16, i32 %bitcast_ln21_12" [transformer.cpp:21]   --->   Operation 97 'fmul' 'mul_1_2_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 98 [1/2] (5.91ns)   --->   "%mul_2 = fmul i32 %bitcast_ln21_21, i32 %bitcast_ln21_1" [transformer.cpp:21]   --->   Operation 98 'fmul' 'mul_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 99 [1/2] (0.73ns)   --->   "%queries_load_7 = load i4 %queries_addr_7" [transformer.cpp:21]   --->   Operation 99 'load' 'queries_load_7' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%bitcast_ln21_22 = bitcast i32 %queries_load_7" [transformer.cpp:21]   --->   Operation 100 'bitcast' 'bitcast_ln21_22' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 101 [2/2] (5.91ns)   --->   "%mul_2_s = fmul i32 %bitcast_ln21_22, i32 %bitcast_ln21_3" [transformer.cpp:21]   --->   Operation 101 'fmul' 'mul_2_s' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 102 [1/2] (5.91ns)   --->   "%mul_2_1 = fmul i32 %bitcast_ln21_21, i32 %bitcast_ln21_7" [transformer.cpp:21]   --->   Operation 102 'fmul' 'mul_2_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 103 [1/2] (5.91ns)   --->   "%mul_2_2 = fmul i32 %bitcast_ln21_21, i32 %bitcast_ln21_11" [transformer.cpp:21]   --->   Operation 103 'fmul' 'mul_2_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.29>
+ST_5 : Operation 104 [1/1] (0.00ns)   --->   "%queries_addr_8 = getelementptr i32 %queries, i64 0, i64 8" [transformer.cpp:21]   --->   Operation 104 'getelementptr' 'queries_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 105 [1/1] (0.00ns)   --->   "%keys_t_addr_8 = getelementptr i32 %keys_t, i64 0, i64 8" [transformer.cpp:21]   --->   Operation 105 'getelementptr' 'keys_t_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 106 [2/3] (7.29ns)   --->   "%add = fadd i32 %mul, i32 0" [transformer.cpp:21]   --->   Operation 106 'fadd' 'add' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 107 [1/2] (0.73ns)   --->   "%queries_load_2 = load i4 %queries_addr_2" [transformer.cpp:21]   --->   Operation 107 'load' 'queries_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 108 [1/1] (0.00ns)   --->   "%bitcast_ln21_4 = bitcast i32 %queries_load_2" [transformer.cpp:21]   --->   Operation 108 'bitcast' 'bitcast_ln21_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 109 [1/2] (0.73ns)   --->   "%keys_t_load_2 = load i4 %keys_t_addr_2" [transformer.cpp:21]   --->   Operation 109 'load' 'keys_t_load_2' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 110 [1/1] (0.00ns)   --->   "%bitcast_ln21_5 = bitcast i32 %keys_t_load_2" [transformer.cpp:21]   --->   Operation 110 'bitcast' 'bitcast_ln21_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 111 [2/2] (5.91ns)   --->   "%mul_3 = fmul i32 %bitcast_ln21_4, i32 %bitcast_ln21_5" [transformer.cpp:21]   --->   Operation 111 'fmul' 'mul_3' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 112 [2/3] (7.29ns)   --->   "%add_4 = fadd i32 %mul_4, i32 0" [transformer.cpp:21]   --->   Operation 112 'fadd' 'add_4' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 113 [1/2] (5.91ns)   --->   "%mul_128_1 = fmul i32 %bitcast_ln21_2, i32 %bitcast_ln21_8" [transformer.cpp:21]   --->   Operation 113 'fmul' 'mul_128_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 114 [1/2] (0.73ns)   --->   "%keys_t_load_5 = load i4 %keys_t_addr_5" [transformer.cpp:21]   --->   Operation 114 'load' 'keys_t_load_5' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 115 [1/1] (0.00ns)   --->   "%bitcast_ln21_9 = bitcast i32 %keys_t_load_5" [transformer.cpp:21]   --->   Operation 115 'bitcast' 'bitcast_ln21_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 116 [2/2] (5.91ns)   --->   "%mul_128_2 = fmul i32 %bitcast_ln21_4, i32 %bitcast_ln21_9" [transformer.cpp:21]   --->   Operation 116 'fmul' 'mul_128_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 117 [3/3] (7.29ns)   --->   "%add_5 = fadd i32 %mul_5, i32 0" [transformer.cpp:21]   --->   Operation 117 'fadd' 'add_5' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 118 [1/2] (5.91ns)   --->   "%mul_234_1 = fmul i32 %bitcast_ln21_2, i32 %bitcast_ln21_12" [transformer.cpp:21]   --->   Operation 118 'fmul' 'mul_234_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 119 [2/2] (0.73ns)   --->   "%keys_t_load_8 = load i4 %keys_t_addr_8" [transformer.cpp:21]   --->   Operation 119 'load' 'keys_t_load_8' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 120 [2/3] (7.29ns)   --->   "%add_1 = fadd i32 %mul_1, i32 0" [transformer.cpp:21]   --->   Operation 120 'fadd' 'add_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 121 [1/2] (5.91ns)   --->   "%mul_1_s = fmul i32 %bitcast_ln21_16, i32 %bitcast_ln21_3" [transformer.cpp:21]   --->   Operation 121 'fmul' 'mul_1_s' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 122 [1/2] (0.73ns)   --->   "%queries_load_5 = load i4 %queries_addr_5" [transformer.cpp:21]   --->   Operation 122 'load' 'queries_load_5' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%bitcast_ln21_17 = bitcast i32 %queries_load_5" [transformer.cpp:21]   --->   Operation 123 'bitcast' 'bitcast_ln21_17' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 124 [2/2] (5.91ns)   --->   "%mul_1_3 = fmul i32 %bitcast_ln21_17, i32 %bitcast_ln21_5" [transformer.cpp:21]   --->   Operation 124 'fmul' 'mul_1_3' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 125 [2/3] (7.29ns)   --->   "%add_1_1 = fadd i32 %mul_1_1, i32 0" [transformer.cpp:21]   --->   Operation 125 'fadd' 'add_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 126 [1/2] (5.91ns)   --->   "%mul_1_1_1 = fmul i32 %bitcast_ln21_16, i32 %bitcast_ln21_8" [transformer.cpp:21]   --->   Operation 126 'fmul' 'mul_1_1_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 127 [2/2] (5.91ns)   --->   "%mul_1_1_2 = fmul i32 %bitcast_ln21_17, i32 %bitcast_ln21_9" [transformer.cpp:21]   --->   Operation 127 'fmul' 'mul_1_1_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 128 [3/3] (7.29ns)   --->   "%add_1_2 = fadd i32 %mul_1_2, i32 0" [transformer.cpp:21]   --->   Operation 128 'fadd' 'add_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 129 [1/2] (5.91ns)   --->   "%mul_1_2_1 = fmul i32 %bitcast_ln21_16, i32 %bitcast_ln21_12" [transformer.cpp:21]   --->   Operation 129 'fmul' 'mul_1_2_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 130 [3/3] (7.29ns)   --->   "%add_2 = fadd i32 %mul_2, i32 0" [transformer.cpp:21]   --->   Operation 130 'fadd' 'add_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 131 [1/2] (5.91ns)   --->   "%mul_2_s = fmul i32 %bitcast_ln21_22, i32 %bitcast_ln21_3" [transformer.cpp:21]   --->   Operation 131 'fmul' 'mul_2_s' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 132 [2/2] (0.73ns)   --->   "%queries_load_8 = load i4 %queries_addr_8" [transformer.cpp:21]   --->   Operation 132 'load' 'queries_load_8' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 133 [3/3] (7.29ns)   --->   "%add_2_1 = fadd i32 %mul_2_1, i32 0" [transformer.cpp:21]   --->   Operation 133 'fadd' 'add_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 134 [2/2] (5.91ns)   --->   "%mul_2_1_1 = fmul i32 %bitcast_ln21_22, i32 %bitcast_ln21_8" [transformer.cpp:21]   --->   Operation 134 'fmul' 'mul_2_1_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 135 [3/3] (7.29ns)   --->   "%add_2_2 = fadd i32 %mul_2_2, i32 0" [transformer.cpp:21]   --->   Operation 135 'fadd' 'add_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 136 [2/2] (5.91ns)   --->   "%mul_2_2_1 = fmul i32 %bitcast_ln21_22, i32 %bitcast_ln21_12" [transformer.cpp:21]   --->   Operation 136 'fmul' 'mul_2_2_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.29>
+ST_6 : Operation 137 [1/3] (7.29ns)   --->   "%add = fadd i32 %mul, i32 0" [transformer.cpp:21]   --->   Operation 137 'fadd' 'add' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 138 [1/2] (5.91ns)   --->   "%mul_3 = fmul i32 %bitcast_ln21_4, i32 %bitcast_ln21_5" [transformer.cpp:21]   --->   Operation 138 'fmul' 'mul_3' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 139 [1/3] (7.29ns)   --->   "%add_4 = fadd i32 %mul_4, i32 0" [transformer.cpp:21]   --->   Operation 139 'fadd' 'add_4' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 140 [1/2] (5.91ns)   --->   "%mul_128_2 = fmul i32 %bitcast_ln21_4, i32 %bitcast_ln21_9" [transformer.cpp:21]   --->   Operation 140 'fmul' 'mul_128_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 141 [2/3] (7.29ns)   --->   "%add_5 = fadd i32 %mul_5, i32 0" [transformer.cpp:21]   --->   Operation 141 'fadd' 'add_5' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 142 [1/2] (0.73ns)   --->   "%keys_t_load_8 = load i4 %keys_t_addr_8" [transformer.cpp:21]   --->   Operation 142 'load' 'keys_t_load_8' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_6 : Operation 143 [1/1] (0.00ns)   --->   "%bitcast_ln21_13 = bitcast i32 %keys_t_load_8" [transformer.cpp:21]   --->   Operation 143 'bitcast' 'bitcast_ln21_13' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 144 [2/2] (5.91ns)   --->   "%mul_234_2 = fmul i32 %bitcast_ln21_4, i32 %bitcast_ln21_13" [transformer.cpp:21]   --->   Operation 144 'fmul' 'mul_234_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 145 [1/3] (7.29ns)   --->   "%add_1 = fadd i32 %mul_1, i32 0" [transformer.cpp:21]   --->   Operation 145 'fadd' 'add_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 146 [1/2] (5.91ns)   --->   "%mul_1_3 = fmul i32 %bitcast_ln21_17, i32 %bitcast_ln21_5" [transformer.cpp:21]   --->   Operation 146 'fmul' 'mul_1_3' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 147 [1/3] (7.29ns)   --->   "%add_1_1 = fadd i32 %mul_1_1, i32 0" [transformer.cpp:21]   --->   Operation 147 'fadd' 'add_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 148 [1/2] (5.91ns)   --->   "%mul_1_1_2 = fmul i32 %bitcast_ln21_17, i32 %bitcast_ln21_9" [transformer.cpp:21]   --->   Operation 148 'fmul' 'mul_1_1_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 149 [2/3] (7.29ns)   --->   "%add_1_2 = fadd i32 %mul_1_2, i32 0" [transformer.cpp:21]   --->   Operation 149 'fadd' 'add_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 150 [2/2] (5.91ns)   --->   "%mul_1_2_2 = fmul i32 %bitcast_ln21_17, i32 %bitcast_ln21_13" [transformer.cpp:21]   --->   Operation 150 'fmul' 'mul_1_2_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 151 [2/3] (7.29ns)   --->   "%add_2 = fadd i32 %mul_2, i32 0" [transformer.cpp:21]   --->   Operation 151 'fadd' 'add_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 152 [1/2] (0.73ns)   --->   "%queries_load_8 = load i4 %queries_addr_8" [transformer.cpp:21]   --->   Operation 152 'load' 'queries_load_8' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_6 : Operation 153 [1/1] (0.00ns)   --->   "%bitcast_ln21_23 = bitcast i32 %queries_load_8" [transformer.cpp:21]   --->   Operation 153 'bitcast' 'bitcast_ln21_23' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 154 [2/2] (5.91ns)   --->   "%mul_2_3 = fmul i32 %bitcast_ln21_23, i32 %bitcast_ln21_5" [transformer.cpp:21]   --->   Operation 154 'fmul' 'mul_2_3' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 155 [2/3] (7.29ns)   --->   "%add_2_1 = fadd i32 %mul_2_1, i32 0" [transformer.cpp:21]   --->   Operation 155 'fadd' 'add_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 156 [1/2] (5.91ns)   --->   "%mul_2_1_1 = fmul i32 %bitcast_ln21_22, i32 %bitcast_ln21_8" [transformer.cpp:21]   --->   Operation 156 'fmul' 'mul_2_1_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 157 [2/2] (5.91ns)   --->   "%mul_2_1_2 = fmul i32 %bitcast_ln21_23, i32 %bitcast_ln21_9" [transformer.cpp:21]   --->   Operation 157 'fmul' 'mul_2_1_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 158 [2/3] (7.29ns)   --->   "%add_2_2 = fadd i32 %mul_2_2, i32 0" [transformer.cpp:21]   --->   Operation 158 'fadd' 'add_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 159 [1/2] (5.91ns)   --->   "%mul_2_2_1 = fmul i32 %bitcast_ln21_22, i32 %bitcast_ln21_12" [transformer.cpp:21]   --->   Operation 159 'fmul' 'mul_2_2_1' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 160 [2/2] (5.91ns)   --->   "%mul_2_2_2 = fmul i32 %bitcast_ln21_23, i32 %bitcast_ln21_13" [transformer.cpp:21]   --->   Operation 160 'fmul' 'mul_2_2_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.29>
+ST_7 : Operation 161 [3/3] (7.29ns)   --->   "%add_s = fadd i32 %add, i32 %mul_s" [transformer.cpp:21]   --->   Operation 161 'fadd' 'add_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 162 [3/3] (7.29ns)   --->   "%add_129_1 = fadd i32 %add_4, i32 %mul_128_1" [transformer.cpp:21]   --->   Operation 162 'fadd' 'add_129_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 163 [1/3] (7.29ns)   --->   "%add_5 = fadd i32 %mul_5, i32 0" [transformer.cpp:21]   --->   Operation 163 'fadd' 'add_5' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 164 [1/2] (5.91ns)   --->   "%mul_234_2 = fmul i32 %bitcast_ln21_4, i32 %bitcast_ln21_13" [transformer.cpp:21]   --->   Operation 164 'fmul' 'mul_234_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 165 [3/3] (7.29ns)   --->   "%add_1_s = fadd i32 %add_1, i32 %mul_1_s" [transformer.cpp:21]   --->   Operation 165 'fadd' 'add_1_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 166 [3/3] (7.29ns)   --->   "%add_1_1_1 = fadd i32 %add_1_1, i32 %mul_1_1_1" [transformer.cpp:21]   --->   Operation 166 'fadd' 'add_1_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 167 [1/3] (7.29ns)   --->   "%add_1_2 = fadd i32 %mul_1_2, i32 0" [transformer.cpp:21]   --->   Operation 167 'fadd' 'add_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 168 [1/2] (5.91ns)   --->   "%mul_1_2_2 = fmul i32 %bitcast_ln21_17, i32 %bitcast_ln21_13" [transformer.cpp:21]   --->   Operation 168 'fmul' 'mul_1_2_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 169 [1/3] (7.29ns)   --->   "%add_2 = fadd i32 %mul_2, i32 0" [transformer.cpp:21]   --->   Operation 169 'fadd' 'add_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 170 [1/2] (5.91ns)   --->   "%mul_2_3 = fmul i32 %bitcast_ln21_23, i32 %bitcast_ln21_5" [transformer.cpp:21]   --->   Operation 170 'fmul' 'mul_2_3' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 171 [1/3] (7.29ns)   --->   "%add_2_1 = fadd i32 %mul_2_1, i32 0" [transformer.cpp:21]   --->   Operation 171 'fadd' 'add_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 172 [1/2] (5.91ns)   --->   "%mul_2_1_2 = fmul i32 %bitcast_ln21_23, i32 %bitcast_ln21_9" [transformer.cpp:21]   --->   Operation 172 'fmul' 'mul_2_1_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 173 [1/3] (7.29ns)   --->   "%add_2_2 = fadd i32 %mul_2_2, i32 0" [transformer.cpp:21]   --->   Operation 173 'fadd' 'add_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 174 [1/2] (5.91ns)   --->   "%mul_2_2_2 = fmul i32 %bitcast_ln21_23, i32 %bitcast_ln21_13" [transformer.cpp:21]   --->   Operation 174 'fmul' 'mul_2_2_2' <Predicate = true> <Delay = 5.91> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 5.91> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.29>
+ST_8 : Operation 175 [2/3] (7.29ns)   --->   "%add_s = fadd i32 %add, i32 %mul_s" [transformer.cpp:21]   --->   Operation 175 'fadd' 'add_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 176 [2/3] (7.29ns)   --->   "%add_129_1 = fadd i32 %add_4, i32 %mul_128_1" [transformer.cpp:21]   --->   Operation 176 'fadd' 'add_129_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 177 [3/3] (7.29ns)   --->   "%add_235_1 = fadd i32 %add_5, i32 %mul_234_1" [transformer.cpp:21]   --->   Operation 177 'fadd' 'add_235_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 178 [2/3] (7.29ns)   --->   "%add_1_s = fadd i32 %add_1, i32 %mul_1_s" [transformer.cpp:21]   --->   Operation 178 'fadd' 'add_1_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 179 [2/3] (7.29ns)   --->   "%add_1_1_1 = fadd i32 %add_1_1, i32 %mul_1_1_1" [transformer.cpp:21]   --->   Operation 179 'fadd' 'add_1_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 180 [3/3] (7.29ns)   --->   "%add_1_2_1 = fadd i32 %add_1_2, i32 %mul_1_2_1" [transformer.cpp:21]   --->   Operation 180 'fadd' 'add_1_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 181 [3/3] (7.29ns)   --->   "%add_2_s = fadd i32 %add_2, i32 %mul_2_s" [transformer.cpp:21]   --->   Operation 181 'fadd' 'add_2_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 182 [3/3] (7.29ns)   --->   "%add_2_1_1 = fadd i32 %add_2_1, i32 %mul_2_1_1" [transformer.cpp:21]   --->   Operation 182 'fadd' 'add_2_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 183 [3/3] (7.29ns)   --->   "%add_2_2_1 = fadd i32 %add_2_2, i32 %mul_2_2_1" [transformer.cpp:21]   --->   Operation 183 'fadd' 'add_2_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.29>
+ST_9 : Operation 184 [1/3] (7.29ns)   --->   "%add_s = fadd i32 %add, i32 %mul_s" [transformer.cpp:21]   --->   Operation 184 'fadd' 'add_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 185 [1/3] (7.29ns)   --->   "%add_129_1 = fadd i32 %add_4, i32 %mul_128_1" [transformer.cpp:21]   --->   Operation 185 'fadd' 'add_129_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 186 [2/3] (7.29ns)   --->   "%add_235_1 = fadd i32 %add_5, i32 %mul_234_1" [transformer.cpp:21]   --->   Operation 186 'fadd' 'add_235_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 187 [1/3] (7.29ns)   --->   "%add_1_s = fadd i32 %add_1, i32 %mul_1_s" [transformer.cpp:21]   --->   Operation 187 'fadd' 'add_1_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 188 [1/3] (7.29ns)   --->   "%add_1_1_1 = fadd i32 %add_1_1, i32 %mul_1_1_1" [transformer.cpp:21]   --->   Operation 188 'fadd' 'add_1_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 189 [2/3] (7.29ns)   --->   "%add_1_2_1 = fadd i32 %add_1_2, i32 %mul_1_2_1" [transformer.cpp:21]   --->   Operation 189 'fadd' 'add_1_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 190 [2/3] (7.29ns)   --->   "%add_2_s = fadd i32 %add_2, i32 %mul_2_s" [transformer.cpp:21]   --->   Operation 190 'fadd' 'add_2_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 191 [2/3] (7.29ns)   --->   "%add_2_1_1 = fadd i32 %add_2_1, i32 %mul_2_1_1" [transformer.cpp:21]   --->   Operation 191 'fadd' 'add_2_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 192 [2/3] (7.29ns)   --->   "%add_2_2_1 = fadd i32 %add_2_2, i32 %mul_2_2_1" [transformer.cpp:21]   --->   Operation 192 'fadd' 'add_2_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.29>
+ST_10 : Operation 193 [3/3] (7.29ns)   --->   "%add_3 = fadd i32 %add_s, i32 %mul_3" [transformer.cpp:21]   --->   Operation 193 'fadd' 'add_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 194 [1/3] (7.29ns)   --->   "%add_235_1 = fadd i32 %add_5, i32 %mul_234_1" [transformer.cpp:21]   --->   Operation 194 'fadd' 'add_235_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 195 [1/3] (7.29ns)   --->   "%add_1_2_1 = fadd i32 %add_1_2, i32 %mul_1_2_1" [transformer.cpp:21]   --->   Operation 195 'fadd' 'add_1_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 196 [1/3] (7.29ns)   --->   "%add_2_s = fadd i32 %add_2, i32 %mul_2_s" [transformer.cpp:21]   --->   Operation 196 'fadd' 'add_2_s' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 197 [1/3] (7.29ns)   --->   "%add_2_1_1 = fadd i32 %add_2_1, i32 %mul_2_1_1" [transformer.cpp:21]   --->   Operation 197 'fadd' 'add_2_1_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 198 [1/3] (7.29ns)   --->   "%add_2_2_1 = fadd i32 %add_2_2, i32 %mul_2_2_1" [transformer.cpp:21]   --->   Operation 198 'fadd' 'add_2_2_1' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.29>
+ST_11 : Operation 199 [2/3] (7.29ns)   --->   "%add_3 = fadd i32 %add_s, i32 %mul_3" [transformer.cpp:21]   --->   Operation 199 'fadd' 'add_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 200 [3/3] (7.29ns)   --->   "%add_129_2 = fadd i32 %add_129_1, i32 %mul_128_2" [transformer.cpp:21]   --->   Operation 200 'fadd' 'add_129_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 201 [3/3] (7.29ns)   --->   "%add_235_2 = fadd i32 %add_235_1, i32 %mul_234_2" [transformer.cpp:21]   --->   Operation 201 'fadd' 'add_235_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 202 [3/3] (7.29ns)   --->   "%add_1_3 = fadd i32 %add_1_s, i32 %mul_1_3" [transformer.cpp:21]   --->   Operation 202 'fadd' 'add_1_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 203 [3/3] (7.29ns)   --->   "%add_1_1_2 = fadd i32 %add_1_1_1, i32 %mul_1_1_2" [transformer.cpp:21]   --->   Operation 203 'fadd' 'add_1_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 204 [3/3] (7.29ns)   --->   "%add_1_2_2 = fadd i32 %add_1_2_1, i32 %mul_1_2_2" [transformer.cpp:21]   --->   Operation 204 'fadd' 'add_1_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 205 [3/3] (7.29ns)   --->   "%add_2_3 = fadd i32 %add_2_s, i32 %mul_2_3" [transformer.cpp:21]   --->   Operation 205 'fadd' 'add_2_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.29>
+ST_12 : Operation 206 [1/3] (7.29ns)   --->   "%add_3 = fadd i32 %add_s, i32 %mul_3" [transformer.cpp:21]   --->   Operation 206 'fadd' 'add_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 207 [2/3] (7.29ns)   --->   "%add_129_2 = fadd i32 %add_129_1, i32 %mul_128_2" [transformer.cpp:21]   --->   Operation 207 'fadd' 'add_129_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 208 [2/3] (7.29ns)   --->   "%add_235_2 = fadd i32 %add_235_1, i32 %mul_234_2" [transformer.cpp:21]   --->   Operation 208 'fadd' 'add_235_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 209 [2/3] (7.29ns)   --->   "%add_1_3 = fadd i32 %add_1_s, i32 %mul_1_3" [transformer.cpp:21]   --->   Operation 209 'fadd' 'add_1_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 210 [2/3] (7.29ns)   --->   "%add_1_1_2 = fadd i32 %add_1_1_1, i32 %mul_1_1_2" [transformer.cpp:21]   --->   Operation 210 'fadd' 'add_1_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 211 [2/3] (7.29ns)   --->   "%add_1_2_2 = fadd i32 %add_1_2_1, i32 %mul_1_2_2" [transformer.cpp:21]   --->   Operation 211 'fadd' 'add_1_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 212 [2/3] (7.29ns)   --->   "%add_2_3 = fadd i32 %add_2_s, i32 %mul_2_3" [transformer.cpp:21]   --->   Operation 212 'fadd' 'add_2_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 213 [3/3] (7.29ns)   --->   "%add_2_1_2 = fadd i32 %add_2_1_1, i32 %mul_2_1_2" [transformer.cpp:21]   --->   Operation 213 'fadd' 'add_2_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 214 [3/3] (7.29ns)   --->   "%add_2_2_2 = fadd i32 %add_2_2_1, i32 %mul_2_2_2" [transformer.cpp:21]   --->   Operation 214 'fadd' 'add_2_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.29>
+ST_13 : Operation 215 [1/1] (0.00ns)   --->   "%score_m_addr = getelementptr i32 %score_m, i64 0, i64 0" [transformer.cpp:21]   --->   Operation 215 'getelementptr' 'score_m_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 216 [1/1] (0.00ns)   --->   "%bitcast_ln21_6 = bitcast i32 %add_3" [transformer.cpp:21]   --->   Operation 216 'bitcast' 'bitcast_ln21_6' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 217 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_6, i4 %score_m_addr" [transformer.cpp:21]   --->   Operation 217 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_13 : Operation 218 [1/3] (7.29ns)   --->   "%add_129_2 = fadd i32 %add_129_1, i32 %mul_128_2" [transformer.cpp:21]   --->   Operation 218 'fadd' 'add_129_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 219 [1/3] (7.29ns)   --->   "%add_235_2 = fadd i32 %add_235_1, i32 %mul_234_2" [transformer.cpp:21]   --->   Operation 219 'fadd' 'add_235_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 220 [1/3] (7.29ns)   --->   "%add_1_3 = fadd i32 %add_1_s, i32 %mul_1_3" [transformer.cpp:21]   --->   Operation 220 'fadd' 'add_1_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 221 [1/3] (7.29ns)   --->   "%add_1_1_2 = fadd i32 %add_1_1_1, i32 %mul_1_1_2" [transformer.cpp:21]   --->   Operation 221 'fadd' 'add_1_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 222 [1/3] (7.29ns)   --->   "%add_1_2_2 = fadd i32 %add_1_2_1, i32 %mul_1_2_2" [transformer.cpp:21]   --->   Operation 222 'fadd' 'add_1_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 223 [1/3] (7.29ns)   --->   "%add_2_3 = fadd i32 %add_2_s, i32 %mul_2_3" [transformer.cpp:21]   --->   Operation 223 'fadd' 'add_2_3' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 224 [2/3] (7.29ns)   --->   "%add_2_1_2 = fadd i32 %add_2_1_1, i32 %mul_2_1_2" [transformer.cpp:21]   --->   Operation 224 'fadd' 'add_2_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 225 [2/3] (7.29ns)   --->   "%add_2_2_2 = fadd i32 %add_2_2_1, i32 %mul_2_2_2" [transformer.cpp:21]   --->   Operation 225 'fadd' 'add_2_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.29>
+ST_14 : Operation 226 [1/1] (0.00ns)   --->   "%score_m_addr_1 = getelementptr i32 %score_m, i64 0, i64 1" [transformer.cpp:21]   --->   Operation 226 'getelementptr' 'score_m_addr_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 227 [1/1] (0.00ns)   --->   "%score_m_addr_2 = getelementptr i32 %score_m, i64 0, i64 2" [transformer.cpp:21]   --->   Operation 227 'getelementptr' 'score_m_addr_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 228 [1/1] (0.00ns)   --->   "%bitcast_ln21_10 = bitcast i32 %add_129_2" [transformer.cpp:21]   --->   Operation 228 'bitcast' 'bitcast_ln21_10' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 229 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_10, i4 %score_m_addr_1" [transformer.cpp:21]   --->   Operation 229 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_14 : Operation 230 [1/1] (0.00ns)   --->   "%bitcast_ln21_14 = bitcast i32 %add_235_2" [transformer.cpp:21]   --->   Operation 230 'bitcast' 'bitcast_ln21_14' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 231 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_14, i4 %score_m_addr_2" [transformer.cpp:21]   --->   Operation 231 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_14 : Operation 232 [1/3] (7.29ns)   --->   "%add_2_1_2 = fadd i32 %add_2_1_1, i32 %mul_2_1_2" [transformer.cpp:21]   --->   Operation 232 'fadd' 'add_2_1_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 233 [1/3] (7.29ns)   --->   "%add_2_2_2 = fadd i32 %add_2_2_1, i32 %mul_2_2_2" [transformer.cpp:21]   --->   Operation 233 'fadd' 'add_2_2_2' <Predicate = true> <Delay = 7.29> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 2> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 0.73>
+ST_15 : Operation 234 [1/1] (0.00ns)   --->   "%score_m_addr_3 = getelementptr i32 %score_m, i64 0, i64 3" [transformer.cpp:21]   --->   Operation 234 'getelementptr' 'score_m_addr_3' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 235 [1/1] (0.00ns)   --->   "%score_m_addr_4 = getelementptr i32 %score_m, i64 0, i64 4" [transformer.cpp:21]   --->   Operation 235 'getelementptr' 'score_m_addr_4' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 236 [1/1] (0.00ns)   --->   "%bitcast_ln21_18 = bitcast i32 %add_1_3" [transformer.cpp:21]   --->   Operation 236 'bitcast' 'bitcast_ln21_18' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 237 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_18, i4 %score_m_addr_3" [transformer.cpp:21]   --->   Operation 237 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_15 : Operation 238 [1/1] (0.00ns)   --->   "%bitcast_ln21_19 = bitcast i32 %add_1_1_2" [transformer.cpp:21]   --->   Operation 238 'bitcast' 'bitcast_ln21_19' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 239 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_19, i4 %score_m_addr_4" [transformer.cpp:21]   --->   Operation 239 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 16 <SV = 15> <Delay = 0.73>
+ST_16 : Operation 240 [1/1] (0.00ns)   --->   "%score_m_addr_5 = getelementptr i32 %score_m, i64 0, i64 5" [transformer.cpp:21]   --->   Operation 240 'getelementptr' 'score_m_addr_5' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 241 [1/1] (0.00ns)   --->   "%score_m_addr_6 = getelementptr i32 %score_m, i64 0, i64 6" [transformer.cpp:21]   --->   Operation 241 'getelementptr' 'score_m_addr_6' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 242 [1/1] (0.00ns)   --->   "%bitcast_ln21_20 = bitcast i32 %add_1_2_2" [transformer.cpp:21]   --->   Operation 242 'bitcast' 'bitcast_ln21_20' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 243 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_20, i4 %score_m_addr_5" [transformer.cpp:21]   --->   Operation 243 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_16 : Operation 244 [1/1] (0.00ns)   --->   "%bitcast_ln21_24 = bitcast i32 %add_2_3" [transformer.cpp:21]   --->   Operation 244 'bitcast' 'bitcast_ln21_24' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 245 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_24, i4 %score_m_addr_6" [transformer.cpp:21]   --->   Operation 245 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 17 <SV = 16> <Delay = 0.73>
+ST_17 : Operation 246 [1/1] (0.00ns)   --->   "%score_m_addr_7 = getelementptr i32 %score_m, i64 0, i64 7" [transformer.cpp:21]   --->   Operation 246 'getelementptr' 'score_m_addr_7' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 247 [1/1] (0.00ns)   --->   "%score_m_addr_8 = getelementptr i32 %score_m, i64 0, i64 8" [transformer.cpp:21]   --->   Operation 247 'getelementptr' 'score_m_addr_8' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 248 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0"   --->   Operation 248 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 249 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 249 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 250 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %score_m, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 250 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 251 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %score_m"   --->   Operation 251 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 252 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %queries, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 252 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 253 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %queries"   --->   Operation 253 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 254 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %keys_t, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 254 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 255 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %keys_t"   --->   Operation 255 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 256 [1/1] (0.00ns)   --->   "%bitcast_ln21_25 = bitcast i32 %add_2_1_2" [transformer.cpp:21]   --->   Operation 256 'bitcast' 'bitcast_ln21_25' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 257 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_25, i4 %score_m_addr_7" [transformer.cpp:21]   --->   Operation 257 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_17 : Operation 258 [1/1] (0.00ns)   --->   "%bitcast_ln21_26 = bitcast i32 %add_2_2_2" [transformer.cpp:21]   --->   Operation 258 'bitcast' 'bitcast_ln21_26' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 259 [1/1] (0.73ns)   --->   "%store_ln21 = store i32 %bitcast_ln21_26, i4 %score_m_addr_8" [transformer.cpp:21]   --->   Operation 259 'store' 'store_ln21' <Predicate = true> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_17 : Operation 260 [1/1] (0.00ns)   --->   "%ret_ln25 = ret" [transformer.cpp:25]   --->   Operation 260 'ret' 'ret_ln25' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.73ns
+The critical path consists of the following:
+	'getelementptr' operation ('queries_addr', transformer.cpp:21) [13]  (0 ns)
+	'load' operation ('queries_load', transformer.cpp:21) on array 'queries' [39]  (0.73 ns)
+
+ <State 2>: 6.64ns
+The critical path consists of the following:
+	'load' operation ('queries_load', transformer.cpp:21) on array 'queries' [39]  (0.73 ns)
+	'fmul' operation ('mul', transformer.cpp:21) [43]  (5.91 ns)
+
+ <State 3>: 6.64ns
+The critical path consists of the following:
+	'load' operation ('queries_load_1', transformer.cpp:21) on array 'queries' [45]  (0.73 ns)
+	'fmul' operation ('mul_s', transformer.cpp:21) [49]  (5.91 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add', transformer.cpp:21) [44]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add', transformer.cpp:21) [44]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add', transformer.cpp:21) [44]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_s', transformer.cpp:21) [50]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_s', transformer.cpp:21) [50]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_s', transformer.cpp:21) [50]  (7.3 ns)
+
+ <State 10>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_3', transformer.cpp:21) [56]  (7.3 ns)
+
+ <State 11>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_3', transformer.cpp:21) [56]  (7.3 ns)
+
+ <State 12>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_3', transformer.cpp:21) [56]  (7.3 ns)
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_129_2', transformer.cpp:21) [70]  (7.3 ns)
+
+ <State 14>: 7.3ns
+The critical path consists of the following:
+	'fadd' operation ('add_2_1_2', transformer.cpp:21) [136]  (7.3 ns)
+
+ <State 15>: 0.73ns
+The critical path consists of the following:
+	'getelementptr' operation ('score_m_addr_3', transformer.cpp:21) [7]  (0 ns)
+	'store' operation ('store_ln21', transformer.cpp:21) of variable 'bitcast_ln21_18', transformer.cpp:21 on array 'score_m' [100]  (0.73 ns)
+
+ <State 16>: 0.73ns
+The critical path consists of the following:
+	'getelementptr' operation ('score_m_addr_5', transformer.cpp:21) [9]  (0 ns)
+	'store' operation ('store_ln21', transformer.cpp:21) of variable 'bitcast_ln21_20', transformer.cpp:21 on array 'score_m' [116]  (0.73 ns)
+
+ <State 17>: 0.73ns
+The critical path consists of the following:
+	'getelementptr' operation ('score_m_addr_7', transformer.cpp:21) [11]  (0 ns)
+	'store' operation ('store_ln21', transformer.cpp:21) of variable 'bitcast_ln21_25', transformer.cpp:21 on array 'score_m' [138]  (0.73 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

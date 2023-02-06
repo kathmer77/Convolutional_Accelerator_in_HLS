@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="transformer.h" path="C:\Users\Katy\Documents\Transformer\transformer.h"/>
+    <originFiles name="transformer.cpp" path="C:\Users\Katy\Documents\Transformer\transformer.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_transformer.cpp" path="C:\Users\Katy\Documents\Transformer\tb_transformer.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

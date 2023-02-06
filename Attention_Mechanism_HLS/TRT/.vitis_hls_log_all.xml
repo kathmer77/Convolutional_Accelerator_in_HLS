@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'score_matrix' (function 'score_matrix'): Unable to schedule 'load' operation ('keys_t_load_7', transformer.cpp:21) on array 'keys_t' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'keys_t'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-885.html" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:47.612-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'score_matrix' (function 'score_matrix'): Unable to schedule 'load' operation ('keys_t_load_4', transformer.cpp:21) on array 'keys_t' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'keys_t'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-885.html" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:47.375-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'score_matrix' (function 'score_matrix'): Unable to schedule 'load' operation ('queries_load_1', transformer.cpp:21) on array 'queries' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'queries'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-885.html" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:47.200-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'score_matrix' (function 'score_matrix'): Unable to schedule 'load' operation ('queries_load_1', transformer.cpp:21) on array 'queries' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'queries'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-885.html" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:47.126-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 214-281] Estimating pipelined function 'score_matrix' with estimated II increased from II=1 to II=5 because of limited port on variable 'score_m' (transformer.cpp:9:0)" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:45.104-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:108:70" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:37.394-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:107:70" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:37.112-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5544] '#pragma HLS unroll' can only be applied inside loop body: transformer.cpp:95:9" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:36.961-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:93:82" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:36.922-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:92:66" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:36.838-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:79:70" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:36.390-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:78:66" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:36.061-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:64:79" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.940-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:63:87" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.834-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:44:61" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.666-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:43:67" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.613-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:30:69" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.469-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:29:69" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.425-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:13:61" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.370-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:12:62" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.299-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:108:70" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:35.255-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:107:70" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:32.062-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5544] '#pragma HLS unroll' can only be applied inside loop body: transformer.cpp:95:9" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.964-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:93:82" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.830-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:92:66" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.759-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:79:70" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.636-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:78:66" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.454-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:64:79" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.421-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:63:87" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.405-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:44:61" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.334-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:43:67" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.246-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:30:69" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.136-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:29:69" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:31.035-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:13:61" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:30.992-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:12:62" projectName="TRT" solutionName="Opt2" date="2021-12-13T14:51:30.944-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'LOOP1' (transformer.cpp:11:17) in function 'score_matrix' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-960.html" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:56.761-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:100:70" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.876-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:99:70" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.529-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:87:82" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.498-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:86:66" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.435-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:72:70" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.217-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:71:66" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.167-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:61:79" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.098-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:60:87" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:46.006-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:44:61" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:45.838-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:43:67" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:45.819-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:29:69" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:45.763-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:28:69" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:45.698-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:16:61" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:45.633-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:15:62" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:45.468-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:100:70" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:45.410-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:99:70" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:42.426-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:87:82" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:42.381-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:86:66" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:42.296-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:72:70" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:42.189-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:71:66" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:42.065-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:61:79" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:41.903-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:60:87" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:41.764-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:44:61" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:41.577-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:43:67" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:41.337-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:29:69" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:41.296-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:28:69" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:41.207-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:16:61" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:41.091-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5533] unexpected pragma argument 'false', expects identifier: transformer.cpp:15:62" projectName="TRT" solutionName="Optimization" date="2021-12-13T14:39:40.945-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

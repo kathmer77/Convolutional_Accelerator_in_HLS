@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1639424399480">
+  <ports id="1" name="score_m_0" type="PortType" coreName="RAM" coreId="209" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="3">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="keys_t_0" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="3">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="empty_4" type="PortType" coreId="50" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="keys_t_1" type="PortType" coreName="RAM" coreId="53" bitwidth="32" iftype="IfTypeRegister" arraysize="3">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="5" name="empty_5" type="PortType" coreId="4294967295" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="keys_t_2" type="PortType" coreName="RAM" coreId="50" bitwidth="32" iftype="IfTypeRegister" arraysize="3">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="7" name="empty" type="PortType" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="m" type="PortType" coreId="0" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="9" name="score_m_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="3">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="10" name="score_m_2" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="3">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="75" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="78" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="80" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="82" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="86" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="95" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.3/@node_objs.1" sink_obj="//@ports.0"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.3/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.3"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="109" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="114" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="119" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="124" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="128" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="137" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="138" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="140" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="142" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@ports.8"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.4/@node_objs.1" sink_obj="//@ports.9"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="155" source_obj="//@regions.0/@basic_blocks.4/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.3"/>
+  <edges id="281" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="282" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="283" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="284" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="285" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="286" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="287" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="288" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="289" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="290" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="291" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="292" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="293" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <blocks id="24" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>block_30</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="o" originalName="o" coreId="4114743072" bitwidth="2" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="m_read" coreId="4051562072" bitwidth="2" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>m</dataInputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tmp" coreId="540111731" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>empty</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp_1" coreId="544499059" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>empty_5</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp_2" coreId="538976288" bitwidth="32" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>empty_4</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="o_write_ln0" coreId="1937450016" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln0" coreId="4051563752" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_30</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="70" name=".exitStub" type="BlockType">
+    <controlInputObjs>block_30</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="_ln0" coreId="0" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="250" pipe_depth="13" RegionName="LOOP2">
+    <basic_blocks id="30" name="block_30" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>arrayidx314.exit</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.exitStub</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="o_1" lineNumber="12" originalName="o" fileName="transformer.cpp" fileDirectory=".." coreId="538976288" contextFuncName="score_matrix" bitwidth="2" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="12" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="icmp_ln12" lineNumber="12" fileName="transformer.cpp" fileDirectory=".." rtlName="icmp_ln12_fu_195_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="score_matrix" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.39" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="12" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="add_ln12" lineNumber="12" fileName="transformer.cpp" fileDirectory=".." rtlName="add_ln12_fu_201_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="score_matrix" bitwidth="2" opcode="add" m_display="0" m_delay="0.62" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="12" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln12" lineNumber="12" fileName="transformer.cpp" fileDirectory=".." coreId="544089120" contextFuncName="score_matrix" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="12" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="transformer.cpp">
+        <validLinenumbers>12</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="50" name=".split" type="BlockType">
+      <controlInputObjs>block_30</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>arrayidx314.case.2</controlOutputObjs>
+      <controlOutputObjs>arrayidx314.case.0</controlOutputObjs>
+      <controlOutputObjs>arrayidx314.case.1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="zext_ln12" lineNumber="12" fileName="transformer.cpp" fileDirectory=".." rtlName="zext_ln12_fu_207_p1" coreId="1701995620" contextFuncName="score_matrix" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="12" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="keys_t_0_addr" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="540090429" contextFuncName="score_matrix" bitwidth="2" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>keys_t_0</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="keys_t_0_load" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="score_matrix" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="bitcast_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="grp_fu_175_p1" coreId="0" contextFuncName="score_matrix" bitwidth="32" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="mul" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_2_max_dsp_1_U4" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="score_matrix" bitwidth="32" opcode="fmul" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="5.91" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="add" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_3_full_dsp_1_U1" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="score_matrix" bitwidth="32" opcode="fadd" nodeLabel="3.0" nodeLatency="2" m_display="0" m_delay="7.29" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="keys_t_1_addr" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" bitwidth="2" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>keys_t_1</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="keys_t_1_load" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="score_matrix" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="bitcast_ln19_1" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="grp_fu_179_p1" coreId="0" contextFuncName="score_matrix" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="mul_1" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_2_max_dsp_1_U5" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="score_matrix" bitwidth="32" opcode="fmul" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="5.91" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="add_1" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_3_full_dsp_1_U2" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="score_matrix" bitwidth="32" opcode="fadd" nodeLabel="6.0" nodeLatency="2" m_display="0" m_delay="7.29" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="keys_t_2_addr" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" bitwidth="2" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>keys_t_2</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="keys_t_2_load" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="score_matrix" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="bitcast_ln19_2" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="grp_fu_183_p1" coreId="0" contextFuncName="score_matrix" bitwidth="32" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="mul_2" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_2_max_dsp_1_U6" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="score_matrix" bitwidth="32" opcode="fmul" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="5.91" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="add_2" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_3_full_dsp_1_U3" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="score_matrix" bitwidth="32" opcode="fadd" nodeLabel="9.0" nodeLatency="2" m_display="0" m_delay="7.29" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" opcode="switch" m_display="0" m_delay="0.56" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>read</dataInputObjs>
+        <controlInputObjs>arrayidx314.case.2</controlInputObjs>
+        <controlInputObjs>arrayidx314.case.0</controlInputObjs>
+        <controlInputObjs>arrayidx314.case.1</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="transformer.cpp">
+        <validLinenumbers>12</validLinenumbers>
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="55" name="arrayidx314.case.1" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx314.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="bitcast_ln19_5" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="score_m_1_d0" coreId="0" contextFuncName="score_matrix" bitwidth="32" opcode="bitcast" nodeLabel="12.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="score_m_1_addr" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" bitwidth="2" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>score_m_1</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="score_m_1_addr_write_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="score_matrix" opcode="store" nodeLabel="12.0" m_display="0" m_delay="0.73" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="br_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <controlInputObjs>arrayidx314.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="transformer.cpp">
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="60" name="arrayidx314.case.0" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx314.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="bitcast_ln19_4" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="score_m_0_d0" coreId="0" contextFuncName="score_matrix" bitwidth="32" opcode="bitcast" nodeLabel="12.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="score_m_0_addr" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" bitwidth="2" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>score_m_0</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="score_m_0_addr_write_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="score_matrix" opcode="store" nodeLabel="12.0" m_display="0" m_delay="0.73" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <controlInputObjs>arrayidx314.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="transformer.cpp">
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="65" name="arrayidx314.case.2" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx314.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="bitcast_ln19_3" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." rtlName="score_m_2_d0" coreId="0" contextFuncName="score_matrix" bitwidth="32" opcode="bitcast" nodeLabel="12.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="score_m_2_addr" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" bitwidth="2" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>score_m_2</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="score_m_2_addr_write_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="score_matrix" opcode="store" nodeLabel="12.0" m_display="0" m_delay="0.73" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="br_ln19" lineNumber="19" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="19" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <controlInputObjs>arrayidx314.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="transformer.cpp">
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="68" name="arrayidx314.exit" type="BlockType">
+      <controlInputObjs>arrayidx314.case.1</controlInputObjs>
+      <controlInputObjs>arrayidx314.case.0</controlInputObjs>
+      <controlInputObjs>arrayidx314.case.2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_30</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="o_write_ln12" lineNumber="12" fileName="transformer.cpp" fileDirectory=".." coreId="0" contextFuncName="score_matrix" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="transformer.cpp" linenumber="12" fileDirectory="C:\Users\Katy\Documents\Transformer" functionName="score_matrix"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_30</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="transformer.cpp">
+        <validLinenumbers>12</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <regnodes realName="tmp_reg_255">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln12_reg_274">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="add_1_reg_328">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="o_reg_244">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="add_2_reg_338">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_reg_265">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="add_reg_308">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="keys_t_2_addr_reg_318">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln19_2_reg_323">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="keys_t_0_addr_reg_283">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="keys_t_1_addr_reg_298">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_reg_293">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln12_reg_270">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="m_read_reg_251">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln19_1_reg_303">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_1_reg_313">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_1_reg_260">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln19_reg_288">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_2_reg_333">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln12_fu_195">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln12_fu_207">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="o_fu_56">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="keys_t_1_addr_gep_fu_97">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="keys_t_0_addr_gep_fu_84">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="keys_t_2_addr_gep_fu_110">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln19_5_fu_232">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln19_fu_217">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="score_m_2_addr_gep_fu_149">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln19_3_fu_240">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln19_1_fu_222">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln19_2_fu_227">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="score_m_0_addr_gep_fu_136">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln19_4_fu_236">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln12_fu_201">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="score_m_1_addr_gep_fu_123">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_171">
+    <nodeIds>48</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_183">
+    <nodeIds>47</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_162">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_167">
+    <nodeIds>43</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_179">
+    <nodeIds>42</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_175">
+    <nodeIds>37</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="m_read_read_fu_60">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_187">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="o_1_load_fu_192">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln12_store_fu_212">
+    <nodeIds>66</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_1_read_fu_72">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_read_fu_66">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_2_read_fu_78">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="keys_t_0">
+    <nodeIds>35</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="keys_t_1">
+    <nodeIds>40</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="keys_t_2">
+    <nodeIds>45</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="score_m_0">
+    <nodeIds>58</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="score_m_1">
+    <nodeIds>53</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="score_m_2">
+    <nodeIds>63</nodeIds>
+  </memoryPorts>
+  <ioPorts name="empty">
+    <contents name="read">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="empty_4">
+    <contents name="read">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="empty_5">
+    <contents name="read">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="keys_t_0(p0)">
+    <contents name="load">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="keys_t_1(p0)">
+    <contents name="load">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="keys_t_2(p0)">
+    <contents name="load">
+      <nodeIds>45</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="m">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="score_m_0(p0)">
+    <contents name="store">
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="score_m_1(p0)">
+    <contents name="store">
+      <nodeIds>53</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="score_m_2(p0)">
+    <contents name="store">
+      <nodeIds>63</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="2" latency="2"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="35" stage="1" latency="2"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="37" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="38" stage="3" latency="3"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="38" stage="2" latency="3"/>
+      <operations id="40" stage="1" latency="2"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="38" stage="1" latency="3"/>
+      <operations id="42" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="43" stage="3" latency="3"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="43" stage="2" latency="3"/>
+      <operations id="45" stage="1" latency="2"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="43" stage="1" latency="3"/>
+      <operations id="47" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="48" stage="3" latency="3"/>
+    </states>
+    <states id="11">
+      <operations id="48" stage="2" latency="3"/>
+    </states>
+    <states id="12">
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="3"/>
+      <operations id="69" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="score_matrix_Pipeline_LOOP2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="16" mMaxLatency="16">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="LOOP2" mII="1" mDepth="13" mMinTripCount="3" mMaxTripCount="3" mMinLatency="14" mMaxLatency="14" mType="1">
+      <basicBlocks>30</basicBlocks>
+      <basicBlocks>50</basicBlocks>
+      <basicBlocks>55</basicBlocks>
+      <basicBlocks>60</basicBlocks>
+      <basicBlocks>65</basicBlocks>
+      <basicBlocks>68</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>70</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

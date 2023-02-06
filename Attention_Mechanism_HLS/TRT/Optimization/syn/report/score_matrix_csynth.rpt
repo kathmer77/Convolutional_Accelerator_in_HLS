@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vitis HLS Report for 'score_matrix'
+================================================================
+* Date:           Mon Dec 13 14:39:59 2021
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
+* Project:        TRT
+* Solution:       Optimization (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.297 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       57|       57|  0.570 us|  0.570 us|   58|   58|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                        |                             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                Instance                |            Module           |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_score_matrix_Pipeline_LOOP2_fu_172  |score_matrix_Pipeline_LOOP2  |       16|       16|  0.160 us|  0.160 us|   16|   16|       no|
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP1   |       54|       54|        18|          -|          -|     3|        no|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       17|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|    15|     1200|     1065|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       82|    -|
+|Register             |        -|     -|      394|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|    15|     1594|     1164|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3072|   864000|   432000|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9216|  2592000|  1296000|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------+-----------------------------+---------+----+------+------+-----+
+    |                Instance                |            Module           | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------+-----------------------------+---------+----+------+------+-----+
+    |mux_42_32_1_1_U19                       |mux_42_32_1_1                |        0|   0|     0|    20|    0|
+    |mux_42_32_1_1_U20                       |mux_42_32_1_1                |        0|   0|     0|    20|    0|
+    |mux_42_32_1_1_U21                       |mux_42_32_1_1                |        0|   0|     0|    20|    0|
+    |grp_score_matrix_Pipeline_LOOP2_fu_172  |score_matrix_Pipeline_LOOP2  |        0|  15|  1200|  1005|    0|
+    +----------------------------------------+-----------------------------+---------+----+------+------+-----+
+    |Total                                   |                             |        0|  15|  1200|  1065|    0|
+    +----------------------------------------+-----------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln11_fu_207_p2   |         +|   0|  0|   9|           2|           1|
+    |icmp_ln11_fu_201_p2  |      icmp|   0|  0|   8|           2|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  17|           4|           3|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  31|          6|    1|          6|
+    |m_fu_60             |   9|          2|    2|          4|
+    |queries_0_address0  |  14|          3|    2|          6|
+    |queries_1_address0  |  14|          3|    2|          6|
+    |queries_2_address0  |  14|          3|    2|          6|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  82|         17|    9|         28|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |                         Name                        | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                            |   5|   0|    5|          0|
+    |empty_10_reg_371                                     |  32|   0|   32|          0|
+    |empty_11_reg_376                                     |  32|   0|   32|          0|
+    |empty_12_reg_381                                     |  32|   0|   32|          0|
+    |grp_score_matrix_Pipeline_LOOP2_fu_172_ap_start_reg  |   1|   0|    1|          0|
+    |m_1_reg_363                                          |   2|   0|    2|          0|
+    |m_fu_60                                              |   2|   0|    2|          0|
+    |queries_0_load_1_reg_337                             |  32|   0|   32|          0|
+    |queries_0_load_2_reg_353                             |  32|   0|   32|          0|
+    |queries_0_load_reg_291                               |  32|   0|   32|          0|
+    |queries_1_load_1_reg_342                             |  32|   0|   32|          0|
+    |queries_1_load_2_reg_358                             |  32|   0|   32|          0|
+    |queries_1_load_reg_296                               |  32|   0|   32|          0|
+    |queries_2_load_1_reg_331                             |  32|   0|   32|          0|
+    |queries_2_load_2_reg_347                             |  32|   0|   32|          0|
+    |queries_2_load_reg_285                               |  32|   0|   32|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |Total                                                | 394|   0|  394|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------------+-----+-----+------------+--------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  score_matrix|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  score_matrix|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  score_matrix|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  score_matrix|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  score_matrix|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  score_matrix|  return value|
+|score_m_0_address0  |  out|    2|   ap_memory|     score_m_0|         array|
+|score_m_0_ce0       |  out|    1|   ap_memory|     score_m_0|         array|
+|score_m_0_we0       |  out|    1|   ap_memory|     score_m_0|         array|
+|score_m_0_d0        |  out|   32|   ap_memory|     score_m_0|         array|
+|score_m_1_address0  |  out|    2|   ap_memory|     score_m_1|         array|
+|score_m_1_ce0       |  out|    1|   ap_memory|     score_m_1|         array|
+|score_m_1_we0       |  out|    1|   ap_memory|     score_m_1|         array|
+|score_m_1_d0        |  out|   32|   ap_memory|     score_m_1|         array|
+|score_m_2_address0  |  out|    2|   ap_memory|     score_m_2|         array|
+|score_m_2_ce0       |  out|    1|   ap_memory|     score_m_2|         array|
+|score_m_2_we0       |  out|    1|   ap_memory|     score_m_2|         array|
+|score_m_2_d0        |  out|   32|   ap_memory|     score_m_2|         array|
+|queries_0_address0  |  out|    2|   ap_memory|     queries_0|         array|
+|queries_0_ce0       |  out|    1|   ap_memory|     queries_0|         array|
+|queries_0_q0        |   in|   32|   ap_memory|     queries_0|         array|
+|queries_0_address1  |  out|    2|   ap_memory|     queries_0|         array|
+|queries_0_ce1       |  out|    1|   ap_memory|     queries_0|         array|
+|queries_0_q1        |   in|   32|   ap_memory|     queries_0|         array|
+|queries_1_address0  |  out|    2|   ap_memory|     queries_1|         array|
+|queries_1_ce0       |  out|    1|   ap_memory|     queries_1|         array|
+|queries_1_q0        |   in|   32|   ap_memory|     queries_1|         array|
+|queries_1_address1  |  out|    2|   ap_memory|     queries_1|         array|
+|queries_1_ce1       |  out|    1|   ap_memory|     queries_1|         array|
+|queries_1_q1        |   in|   32|   ap_memory|     queries_1|         array|
+|queries_2_address0  |  out|    2|   ap_memory|     queries_2|         array|
+|queries_2_ce0       |  out|    1|   ap_memory|     queries_2|         array|
+|queries_2_q0        |   in|   32|   ap_memory|     queries_2|         array|
+|queries_2_address1  |  out|    2|   ap_memory|     queries_2|         array|
+|queries_2_ce1       |  out|    1|   ap_memory|     queries_2|         array|
+|queries_2_q1        |   in|   32|   ap_memory|     queries_2|         array|
+|keys_t_0_address0   |  out|    2|   ap_memory|      keys_t_0|         array|
+|keys_t_0_ce0        |  out|    1|   ap_memory|      keys_t_0|         array|
+|keys_t_0_q0         |   in|   32|   ap_memory|      keys_t_0|         array|
+|keys_t_1_address0   |  out|    2|   ap_memory|      keys_t_1|         array|
+|keys_t_1_ce0        |  out|    1|   ap_memory|      keys_t_1|         array|
+|keys_t_1_q0         |   in|   32|   ap_memory|      keys_t_1|         array|
+|keys_t_2_address0   |  out|    2|   ap_memory|      keys_t_2|         array|
+|keys_t_2_ce0        |  out|    1|   ap_memory|      keys_t_2|         array|
+|keys_t_2_q0         |   in|   32|   ap_memory|      keys_t_2|         array|
++--------------------+-----+-----+------------+--------------+--------------+
+

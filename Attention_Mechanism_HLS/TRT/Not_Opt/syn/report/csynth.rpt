@@ -1,0 +1,94 @@
+
+
+================================================================
+== Synthesis Summary Report of 'score_matrix'
+================================================================
++ General Information: 
+    * Date:           Mon Dec 13 14:22:56 2021
+    * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
+    * Project:        TRT
+    * Solution:       Not_Opt (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu11p-flga2577-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------+------+------+---------+---------+----------+---------+------+----------+------+----------+------------+------------+-----+
+    |     Modules    | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |          |            |            |     |
+    |     & Loops    | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF     |     LUT    | URAM|
+    +----------------+------+------+---------+---------+----------+---------+------+----------+------+----------+------------+------------+-----+
+    |+ score_matrix  |     -|  0.00|       30|  300.000|         -|       31|     -|        no|     -|  10 (~0%)|  1094 (~0%)|  1116 (~0%)|    -|
+    | o LOOP1_LOOP2  |    II|  7.30|       28|  280.000|        13|        2|     9|       yes|     -|         -|           -|           -|    -|
+    +----------------+------+------+---------+---------+----------+---------+------+----------+------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+----------+
+| Interface        | Bitwidth |
++------------------+----------+
+| keys_t_address0  | 4        |
+| keys_t_address1  | 4        |
+| keys_t_q0        | 32       |
+| keys_t_q1        | 32       |
+| queries_address0 | 4        |
+| queries_address1 | 4        |
+| queries_q0       | 32       |
+| queries_q1       | 32       |
+| score_m_address0 | 4        |
+| score_m_d0       | 32       |
++------------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| score_m  | out       | float*   |
+| queries  | in        | float*   |
+| keys_t   | in        | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Name          | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| score_m  | score_m_address0 | port    | offset   |
+| score_m  | score_m_ce0      | port    |          |
+| score_m  | score_m_we0      | port    |          |
+| score_m  | score_m_d0       | port    |          |
+| queries  | queries_address0 | port    | offset   |
+| queries  | queries_ce0      | port    |          |
+| queries  | queries_q0       | port    |          |
+| queries  | queries_address1 | port    | offset   |
+| queries  | queries_ce1      | port    |          |
+| queries  | queries_q1       | port    |          |
+| keys_t   | keys_t_address0  | port    | offset   |
+| keys_t   | keys_t_ce0       | port    |          |
+| keys_t   | keys_t_q0        | port    |          |
+| keys_t   | keys_t_address1  | port    | offset   |
+| keys_t   | keys_t_ce1       | port    |          |
+| keys_t   | keys_t_q1        | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+

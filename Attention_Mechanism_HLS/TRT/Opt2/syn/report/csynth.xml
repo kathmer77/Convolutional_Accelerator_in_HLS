@@ -1,0 +1,740 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu11p-flga2577-1-e</Part>
+        <TopModelName>score_matrix</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <TargetInitiationInterval>1</TargetInitiationInterval>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>yes</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.649</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>16</Best-caseLatency>
+            <Average-caseLatency>16</Average-caseLatency>
+            <Worst-caseLatency>16</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.160 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.160 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.160 us</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>5</PipelineInitiationInterval>
+            <PipelineDepth>17</PipelineDepth>
+            <Interval-min>5</Interval-min>
+            <Interval-max>5</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <DSP>30</DSP>
+            <FF>3855</FF>
+            <LUT>2775</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9216</DSP>
+            <FF>2592000</FF>
+            <LUT>1296000</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>score_matrix</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>score_matrix</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>score_matrix</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>score_matrix</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>score_matrix</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>score_matrix</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_address0</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_ce0</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_we0</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_d0</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_address1</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_ce1</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_we1</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>score_m_d1</name>
+            <Object>score_m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>queries_address0</name>
+            <Object>queries</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>queries_ce0</name>
+            <Object>queries</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>queries_q0</name>
+            <Object>queries</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>queries_address1</name>
+            <Object>queries</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>queries_ce1</name>
+            <Object>queries</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>queries_q1</name>
+            <Object>queries</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_t_address0</name>
+            <Object>keys_t</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_t_ce0</name>
+            <Object>keys_t</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_t_q0</name>
+            <Object>keys_t</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_t_address1</name>
+            <Object>keys_t</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_t_ce1</name>
+            <Object>keys_t</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_t_q1</name>
+            <Object>keys_t</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>score_matrix</ModuleName>
+            <BindInstances>fmul_32ns_32ns_32_2_max_dsp_1_U7 fadd_32ns_32ns_32_3_full_dsp_1_U1 fmul_32ns_32ns_32_2_max_dsp_1_U7 fadd_32ns_32ns_32_3_full_dsp_1_U1 fmul_32ns_32ns_32_2_max_dsp_1_U7 fadd_32ns_32ns_32_3_full_dsp_1_U6 fmul_32ns_32ns_32_2_max_dsp_1_U8 fadd_32ns_32ns_32_3_full_dsp_1_U2 fmul_32ns_32ns_32_2_max_dsp_1_U7 fadd_32ns_32ns_32_3_full_dsp_1_U2 fmul_32ns_32ns_32_2_max_dsp_1_U8 fadd_32ns_32ns_32_3_full_dsp_1_U1 fmul_32ns_32ns_32_2_max_dsp_1_U8 fadd_32ns_32ns_32_3_full_dsp_1_U1 fmul_32ns_32ns_32_2_max_dsp_1_U8 fadd_32ns_32ns_32_3_full_dsp_1_U1 fmul_32ns_32ns_32_2_max_dsp_1_U7 fadd_32ns_32ns_32_3_full_dsp_1_U2 fmul_32ns_32ns_32_2_max_dsp_1_U9 fadd_32ns_32ns_32_3_full_dsp_1_U3 fmul_32ns_32ns_32_2_max_dsp_1_U9 fadd_32ns_32ns_32_3_full_dsp_1_U3 fmul_32ns_32ns_32_2_max_dsp_1_U9 fadd_32ns_32ns_32_3_full_dsp_1_U3 fmul_32ns_32ns_32_2_max_dsp_1_U10 fadd_32ns_32ns_32_3_full_dsp_1_U4 fmul_32ns_32ns_32_2_max_dsp_1_U10 fadd_32ns_32ns_32_3_full_dsp_1_U4 fmul_32ns_32ns_32_2_max_dsp_1_U10 fadd_32ns_32ns_32_3_full_dsp_1_U4 fmul_32ns_32ns_32_2_max_dsp_1_U9 fadd_32ns_32ns_32_3_full_dsp_1_U2 fmul_32ns_32ns_32_2_max_dsp_1_U11 fadd_32ns_32ns_32_3_full_dsp_1_U2 fmul_32ns_32ns_32_2_max_dsp_1_U8 fadd_32ns_32ns_32_3_full_dsp_1_U5 fmul_32ns_32ns_32_2_max_dsp_1_U10 fadd_32ns_32ns_32_3_full_dsp_1_U3 fmul_32ns_32ns_32_2_max_dsp_1_U12 fadd_32ns_32ns_32_3_full_dsp_1_U3 fmul_32ns_32ns_32_2_max_dsp_1_U9 fadd_32ns_32ns_32_3_full_dsp_1_U6 fmul_32ns_32ns_32_2_max_dsp_1_U11 fadd_32ns_32ns_32_3_full_dsp_1_U4 fmul_32ns_32ns_32_2_max_dsp_1_U11 fadd_32ns_32ns_32_3_full_dsp_1_U4 fmul_32ns_32ns_32_2_max_dsp_1_U10 fadd_32ns_32ns_32_3_full_dsp_1_U5 fmul_32ns_32ns_32_2_max_dsp_1_U12 fadd_32ns_32ns_32_3_full_dsp_1_U5 fmul_32ns_32ns_32_2_max_dsp_1_U12 fadd_32ns_32ns_32_3_full_dsp_1_U5 fmul_32ns_32ns_32_2_max_dsp_1_U11 fadd_32ns_32ns_32_3_full_dsp_1_U6</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>score_matrix</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.649</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>16</Best-caseLatency>
+                    <Average-caseLatency>16</Average-caseLatency>
+                    <Worst-caseLatency>16</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.160 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.160 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.160 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>5</PipelineInitiationInterval>
+                    <PipelineDepth>17</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>30</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>3855</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2775</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U7" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U1" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U7" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U1" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U7" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U6" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U8" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U2" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U7" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_128_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U2" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_129_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U8" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_128_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U1" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_129_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U8" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U1" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U8" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_234_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U1" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_235_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U7" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_234_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U2" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_235_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U9" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U3" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U9" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U3" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U9" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U3" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U10" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U4" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U10" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U4" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U10" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U4" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U9" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U2" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U11" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U2" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U8" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_1_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U5" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_1_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U10" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U3" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U12" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U3" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U9" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U6" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U11" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U4" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U11" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U4" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U10" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U5" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U12" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U5" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U12" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U5" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U11" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="mul_2_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U6" SOURCE="transformer.cpp:21" URAM="0" VARIABLE="add_2_2_2"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="score_m" index="0" direction="out" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="score_m_address0" name="score_m_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="score_m_ce0" name="score_m_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="score_m_we0" name="score_m_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="score_m_d0" name="score_m_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="score_m_address1" name="score_m_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="score_m_ce1" name="score_m_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="score_m_we1" name="score_m_we1" usage="control" direction="out"/>
+                <hwRef type="port" interface="score_m_d1" name="score_m_d1" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="queries" index="1" direction="in" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="queries_address0" name="queries_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="queries_ce0" name="queries_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="queries_q0" name="queries_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="queries_address1" name="queries_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="queries_ce1" name="queries_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="queries_q1" name="queries_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="keys_t" index="2" direction="in" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="keys_t_address0" name="keys_t_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="keys_t_ce0" name="keys_t_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="keys_t_q0" name="keys_t_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="keys_t_address1" name="keys_t_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="keys_t_ce1" name="keys_t_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="keys_t_q1" name="keys_t_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="score_m_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="score_m_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>score_m_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="score_m"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="score_m_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="score_m_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>score_m_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="score_m"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="score_m_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="score_m_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>score_m_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="score_m"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="score_m_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="score_m_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>score_m_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="score_m"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="queries_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="queries_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>queries_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="queries"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="queries_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="queries_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>queries_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="queries"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="queries_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="queries_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>queries_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="queries"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="queries_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="queries_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>queries_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="queries"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="keys_t_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="keys_t_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>keys_t_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="keys_t"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="keys_t_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="keys_t_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>keys_t_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="keys_t"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="keys_t_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="keys_t_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>keys_t_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="keys_t"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="keys_t_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="keys_t_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>keys_t_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="keys_t"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_MEMORY">
+                <table isCollapsed="0">
+                    <keys size="2">Interface, Bitwidth</keys>
+                    <column name="keys_t_address0">4</column>
+                    <column name="keys_t_address1">4</column>
+                    <column name="keys_t_q0">32</column>
+                    <column name="keys_t_q1">32</column>
+                    <column name="queries_address0">4</column>
+                    <column name="queries_address1">4</column>
+                    <column name="queries_q0">32</column>
+                    <column name="queries_q1">32</column>
+                    <column name="score_m_address0">4</column>
+                    <column name="score_m_address1">4</column>
+                    <column name="score_m_d0">32</column>
+                    <column name="score_m_d1">32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="score_m">out, float*</column>
+                    <column name="queries">in, float*</column>
+                    <column name="keys_t">in, float*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Name, HW Type, HW Usage</keys>
+                    <column name="score_m">score_m_address0, port, offset</column>
+                    <column name="score_m">score_m_ce0, port, </column>
+                    <column name="score_m">score_m_we0, port, </column>
+                    <column name="score_m">score_m_d0, port, </column>
+                    <column name="score_m">score_m_address1, port, offset</column>
+                    <column name="score_m">score_m_ce1, port, </column>
+                    <column name="score_m">score_m_we1, port, </column>
+                    <column name="score_m">score_m_d1, port, </column>
+                    <column name="queries">queries_address0, port, offset</column>
+                    <column name="queries">queries_ce0, port, </column>
+                    <column name="queries">queries_q0, port, </column>
+                    <column name="queries">queries_address1, port, offset</column>
+                    <column name="queries">queries_ce1, port, </column>
+                    <column name="queries">queries_q1, port, </column>
+                    <column name="keys_t">keys_t_address0, port, offset</column>
+                    <column name="keys_t">keys_t_ce0, port, </column>
+                    <column name="keys_t">keys_t_q0, port, </column>
+                    <column name="keys_t">keys_t_address1, port, offset</column>
+                    <column name="keys_t">keys_t_ce1, port, </column>
+                    <column name="keys_t">keys_t_q1, port, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0"/>
+    </ReportBurst>
+</profile>
+

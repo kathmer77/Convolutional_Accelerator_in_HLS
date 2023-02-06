@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.219 seconds; current allocated memory: 233.094 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;transformer.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:15:62" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:16:61" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:28:69" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:29:69" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:43:67" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:44:61" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:60:87" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:61:79" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:71:66" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:72:70" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:86:66" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:87:82" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:99:70" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:100:70" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:15:62" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:16:61" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:28:69" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:29:69" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:43:67" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:44:61" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:60:87" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:61:79" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:71:66" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:72:70" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:86:66" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:87:82" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:99:70" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5533]" key="HLS 207-5533" tag="" content="unexpected pragma argument &apos;false&apos;, expects identifier: transformer.cpp:100:70" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.366 seconds; current allocated memory: 234.246 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; flow target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-279]" key="HLS 214-279" tag="" content="Initial Interval estimation mode is set into default." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-284]" key="HLS 214-284" tag="" content="Auto array partition mode is set into default." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;LOOP3&apos; (transformer.cpp:17:8) in function &apos;score_matrix&apos; completely with a factor of 3 (transformer.cpp:9:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-248]" key="HLS 214-248" tag="" content="Applying array_partition to &apos;score_m&apos;: Complete partitioning on dimension 1. (transformer.cpp:9:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-248]" key="HLS 214-248" tag="" content="Applying array_partition to &apos;queries&apos;: Complete partitioning on dimension 1. (transformer.cpp:9:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-248]" key="HLS 214-248" tag="" content="Applying array_partition to &apos;keys_t&apos;: Complete partitioning on dimension 1. (transformer.cpp:9:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-270]" key="HLS 214-270" tag="" content="Starting automatic array partition analysis..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.581 seconds; current allocated memory: 236.396 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 236.397 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 238.140 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.24 seconds; current allocated memory: 238.284 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.365 seconds; current allocated memory: 259.515 MB." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-960]" key="HLS 200-960" tag="LOOP,VITIS_LATENCY" content="Cannot flatten loop &apos;LOOP1&apos; (transformer.cpp:11:17) in function &apos;score_matrix&apos; the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-960.html"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.275 seconds; current allocated memory: 262.219 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;score_matrix&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;score_matrix_Pipeline_LOOP2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;LOOP2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 13, loop &apos;LOOP2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.693 seconds; current allocated memory: 262.542 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.479 seconds; current allocated memory: 262.790 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;score_matrix&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.418 seconds; current allocated memory: 262.971 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.282 seconds; current allocated memory: 263.253 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;score_matrix_Pipeline_LOOP2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;score_matrix_Pipeline_LOOP2&apos; pipeline &apos;LOOP2&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_3_full_dsp_1&apos;: 3 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 3 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;score_matrix_Pipeline_LOOP2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.386 seconds; current allocated memory: 263.916 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;score_matrix&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/score_m_0&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/score_m_1&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/score_m_2&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/queries_0&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/queries_1&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/queries_2&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/keys_t_0&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/keys_t_1&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;score_matrix/keys_t_2&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;score_matrix&apos; to &apos;ap_ctrl_hs&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mux_42_32_1_1&apos;: 3 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;score_matrix&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.544 seconds; current allocated memory: 265.182 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.822 seconds; current allocated memory: 267.563 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.839 seconds; current allocated memory: 272.194 MB." resolution=""/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for score_matrix." resolution=""/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for score_matrix." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,VITIS_KERNEL" content="**** Loop Constraint Status: All loop constraints were satisfied." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,VITIS_KERNEL" content="**** Estimated Fmax: 137.04 MHz" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 23.312 seconds; current allocated memory: 272.180 MB." resolution=""/>
+</Messages>
