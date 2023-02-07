@@ -6,7 +6,7 @@
 
 
 The Transformer model is a neural network that aims to solve sequence-to-sequence tasks, such as natural language tests, genome sequences and sound signals among other data. 
-Mostly used for Natural Language Processing (NLP) and Computer Vision (CV) applications. Proposed in "Attention is All You Need” by Google in 2017.
+Mostly used for Natural Language Processing (NLP) and Computer Vision (CV) applications. Proposed in "[Attention is All You Need](https://arxiv.org/abs/1706.03762)” by Google in 2017.
 
 The overall architecture of the Transformer involves an encoder block on the left, and a decoder block on the right. 
 Both encoder and decoder consist of Multi-Head Attention and Feed Forward layers. These blocks can be stacked on top of each other multiple times, 
@@ -59,8 +59,8 @@ This project is executed in Vitis HLS version 2021.1
 
 ## References
 
-Vitis Download: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2021-1.html
+* Vitis Download: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2021-1.html
 
-Vitis Introduction and Getting Started: https://xilinx.github.io/Vitis-Tutorials/2021-1/build/html/docs/Getting_Started/Vitis/Getting_Started_Vitis.html
+* Vitis Introduction and Getting Started: https://xilinx.github.io/Vitis-Tutorials/2021-1/build/html/docs/Getting_Started/Vitis/Getting_Started_Vitis.html
 
-Transformer Neural Network: https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html 
+* Transformer Neural Network: https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html 
