@@ -23,8 +23,9 @@ This project aims to create an HLS implementation of the important layers of the
 
 For verification purposes, it has been used a “from-scratch” implementation of the model instead of one using high level built-in classes,
 so that,  I could examine and build individual layers in HLS using the functionality described in the Pytorch as a guide. 
-This was also helpful in debugging the outputs of individual layers as I built them in HLS. To verify the correct performance of the constructed layers, 
-the golden data from the model was used to run the code, obtaining an error no greater than 0.000001 of difference.
+To verify the correct performance of the constructed layers, the golden data from the model was used to run the code. 
+A check function is implemented to compared the output of each layer with the data from the model by calculating the average error. This error is very low with respect to the values of the golden data.
+
 
 ### Attention Mechanism
 
