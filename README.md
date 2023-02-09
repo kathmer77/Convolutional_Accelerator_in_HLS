@@ -57,12 +57,13 @@ For this project, I have defined this as the “Score Matrix”. Once the matrix
 
 For convenience, size changes have been incurred throughout the Transformer model. For instance, the input sequence length has been changed from 512 to 24  parameters in order to redure the number of these in consecutive layers. So that, the HLS design is small enough to easily fit into a lower end FPGA and nearly fully unroll all but the topmost layers and still not reach the number of DPS available in the targeted FPGA. The outermost loops have been pipelined. Since the concern of the Transformer architecture in this project is the Inference to obtain the golden data, an untrained model and arbitrary weights have been used. This would change the parameters and golden results every time the model is running however it does not change the functionality. An example of these reshaped values can be found in "[output_inference.txt](https://github.com/katmer7/Convolutional_Accelerator_in_HLS/blob/main/Python%20Transformer%20Neural%20Network/output_inference.txt)"
 
-Optimization Mechanisms evaluated:
+
+<img src="https://user-images.githubusercontent.com/120545621/217926741-00dc5719-e596-4f03-995c-0ef0a93e8ebc.png" width="20" height="20"/> Optimization Mechanisms evaluated:
 - To improve matrix performance, Array Partition has been implemented in Query, Value and Key matrices
 - Pipeline and Dependence Pragmas
 - Pipeline, Dependence and Unrolling Pragmas
 
-FPGAs resources evaluated:
+<img src="https://user-images.githubusercontent.com/120545621/217926741-00dc5719-e596-4f03-995c-0ef0a93e8ebc.png" width="20" height="20"/> FPGAs resources evaluated in generated reports:
 - DPS
 - FFs
 - LUTs
