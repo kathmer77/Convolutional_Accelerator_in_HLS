@@ -84,4 +84,4 @@ This project is executed in Vitis HLS version 2021.1
 
 * Transformer Neural Network: https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html 
 
-* Transforme source code: https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/transformer_from_scratch
+* Transformer source code: https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/transformer_from_scratch
