@@ -53,14 +53,33 @@ For this project, I have defined this as the “Score Matrix”. Once the matrix
   <img src="https://user-images.githubusercontent.com/120545621/217066857-01b48791-cf7d-4762-82d6-433aa1822874.png" width="400" height="200"/>
 </p>
 
+### Optimization
+
+For convenience, size changes have been incurred throughout the Transformer model. For instance, the input sequence length has been changed from 512 to 24  parameters in order to redure the number of these in consecutive layers. So that, the HLS design is small enough to easily fit into a lower end FPGA and nearly fully unroll all but the topmost layers and still not reach the number of DPS available in the targeted FPGA. The outermost loops have been pipelined. Since the concern of the Transformer architecture in this project is the Inference to obtain the golden data, an untrained model and arbitrary weights has been used. This would change the parameters and golden results every time the model is running however it does not change the functionality. An example of these reshaped values can be found in "[output_inference.txt](https://github.com/katmer7/Convolutional_Accelerator_in_HLS/blob/main/Python%20Transformer%20Neural%20Network/output_inference.txt)"
+
+Optimization Mechanisms evaluated:
+- To improve matrix performance, Array Partition has been implemented in Query, Value and Key matrices
+- Pipeline and Dependence Pragmas
+- Pipeline, Dependence and Unrolling Pragmas
+
+FPGAs resources evaluated:
+- DPS
+- FFs
+- LUTs
+
+NOTE: Optimization choices depend on both neural network model and hardware preference. This project results aim to compare the impact of the different optimizations according to design constraints. For additional information about optimization mechanisms can be found in Xilinx documentation portal. Vitis HLS allows adding directives manually or by sotfware configuration.
+
 ## Setup
 This project is executed in Vitis HLS version 2021.1
-
 
 ## References
 
 * Vitis Download: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2021-1.html
 
 * Vitis Introduction and Getting Started: https://xilinx.github.io/Vitis-Tutorials/2021-1/build/html/docs/Getting_Started/Vitis/Getting_Started_Vitis.html
+
+* Xilinx Documentation - Pragmas in HLS: https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/HLS-Pragmas
+
+* Xilinx Documentation - Array Partition: https://xilinx.github.io/Vitis_Accel_Examples/2020.2/html/array_partition.html
 
 * Transformer Neural Network: https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html 
