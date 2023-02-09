@@ -83,3 +83,5 @@ This project is executed in Vitis HLS version 2021.1
 * Xilinx Documentation - Array Partition: https://xilinx.github.io/Vitis_Accel_Examples/2020.2/html/array_partition.html
 
 * Transformer Neural Network: https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html 
+
+* Transforme source code: https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/transformer_from_scratch
