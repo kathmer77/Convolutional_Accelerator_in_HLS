@@ -19,7 +19,7 @@ which is decoded back into another different sequence.
 
 ## Project Description
 
-This project aims to create an HLS implementation of the important layers of the Transformer architecture and explore the effects of optimization on FPGA resources utilization and latency. The effort is focused on implementing the scaled-dot-product and multi-head attention layers, along with linear layers that form the building block of many sub-layers throughout the architecture. 
+This project aims to create an HLS implementation of the important layers of the Transformer architecture and explore the effects of optimization on FPGA resources utilization and latency using Vitis HLS. The effort is focused on implementing the scaled-dot-product and multi-head attention layers, along with linear layers that form the building block of many sub-layers throughout the architecture. 
 
 For verification purposes, it has been used a “from-scratch” implementation of the model instead of one using high level built-in classes,
 so that,  I could examine and build individual layers in HLS using the functionality described in the Pytorch as a guide. 
