@@ -68,7 +68,7 @@ For convenience, size changes have been incurred throughout the Transformer mode
 - FFs
 - LUTs
 
-NOTE: Optimization choices depend on both neural network model and hardware preference. This project results aim to compare the impact of the different optimizations according to design constraints. For additional information about optimization mechanisms can be found in Xilinx documentation portal. Vitis HLS allows adding directives manually or by sotfware configuration.
+NOTE: Optimization choices depend on both neural network model and hardware preference. This project results aim to compare the impact of the different optimizations according to design constraints. Additional information about optimization mechanisms can be found in Xilinx documentation portal. Vitis HLS allows adding directives manually or by sotfware configuration.
 
 ## Setup
 This project is executed in Vitis HLS version 2021.1
