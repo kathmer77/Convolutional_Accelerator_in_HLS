@@ -64,7 +64,7 @@ For convenience, size changes have been incurred throughout the Transformer mode
 - Pipeline, Dependence and Unrolling Pragmas
 
 <img src="https://user-images.githubusercontent.com/120545621/217926741-00dc5719-e596-4f03-995c-0ef0a93e8ebc.png" width="20" height="20"/> FPGAs resources evaluated in generated reports:
-- DPS
+- DSPs
 - FFs
 - LUTs
 
@@ -85,4 +85,4 @@ This project is executed in Vitis HLS version 2021.1
 
 * Transformer Neural Network: https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html 
 
-* Transformer source code: https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/transformer_from_scratch
+* Transformer Source Code: https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/transformer_from_scratch
